@@ -1,0 +1,658 @@
+{
+  "meta": {
+    "version": "1.0",
+    "language": "en",
+    "totalStyles": 12
+  },
+  "styles": [
+    {
+      "id": "minimalism",
+      "name": "Minimalism",
+      "summary": "A 'less is more' philosophy where only essential elements remain and white space is an active design component.",
+      "sections": {
+        "definition": "Minimalism is a design philosophy that emphasizes simplicity: retaining only elements truly essential to function and message, eliminating all superfluous decoration. The core tenet is 'Less is more' — every pixel, every word, every color must justify its existence. White space (negative space) is treated as an active design element, not merely empty area.",
+        "principles": [
+          "White space is priority one: generous padding and line-height guide the eye; content density is deliberately low.",
+          "One focal point per screen: only one primary action/content is emphasized; everything else assumes a supporting role.",
+          "Strict grid alignment: build layouts on an 8pt grid, with perfect alignment; no element should 'float' outside the grid.",
+          "Limited color palette: maximum 2-3 colors, with a single accent color.",
+          "Typography as the visual anchor: hierarchy is created through size and weight, not borders, backgrounds, or icons.",
+          "Eliminate non-functional decoration: no decorative shadows, no meaningless gradients, no texture for its own sake; icons are used only when they improve recognition.",
+          "Concise content: microcopy is succinct, copy is trimmed to the minimum needed for comprehension."
+        ],
+        "palette": [
+          { "role": "Primary background", "hex": "#FFFFFF", "notes": "Pure white, clean feel" },
+          { "role": "Secondary background", "hex": "#F7F7F7", "notes": "Very light gray for alternating sections" },
+          { "role": "Primary text", "hex": "#111111", "notes": "Near-absolute black, high contrast" },
+          { "role": "Secondary text", "hex": "#6B7280", "notes": "Medium gray for meta and captions" },
+          { "role": "Single accent", "hex": "#2563EB", "notes": "Blue 600 - used for CTA, links, active states" },
+          { "role": "Dark variant background", "hex": "#0A0A0A", "notes": "Dark mode background" },
+          { "role": "Dark variant text", "hex": "#FAFAFA", "notes": "Dark mode text" },
+          { "role": "Dark variant accent", "hex": "#3B82F6", "notes": "Dark mode accent" }
+        ],
+        "typography": {
+          "header": { "font": "Inter (or Helvetica Now)", "sizes": "H1: 48-64px / 600-700; H2: 32-40px / 600; Caption: 12-14px / 400, secondary color" },
+          "body": { "font": "Inter (or SF Pro Text)", "sizes": "16-18px / 400, line-height 1.6" }
+        },
+        "visualElements": [
+          "No heavy borders, no bold shadows; if shadows exist they are extremely subtle (0 1px 2px rgba(0,0,0,.05))",
+          "Border-radius is small or absent (0-8px), and consistent throughout",
+          "Thin line-style icons (1.5-2px stroke), consistent with typographic weight",
+          "High-quality images with ample breathing room, no heavy filters",
+          "Dividers: thin 1px lines or white space alone"
+        ],
+        "useCases": [
+          "SaaS / B2B: dashboards, tech landing pages (Linear, Notion, Stripe style) - minimalism helps users focus on data and tasks",
+          "Fintech: banking apps, e-wallets - minimalism conveys reliability and makes numerical data easy to read",
+          "Premium brands / design studios: portfolio, agency intro pages - minimalism reflects sophistication and expertise"
+        ],
+        "combinations": {
+          "good": ["aurora-ui", "flat-design", "glassmorphism"],
+          "caution": ["neumorphism", "claymorphism"],
+          "avoid": ["maximalism", "collage-art", "retro", "brutalism-ui"]
+        },
+        "antiPatterns": [
+          "Introducing a second focal point or competing visual emphasis on the same screen",
+          "Adding decorative shadows, gradients, or textures that serve no functional purpose",
+          "Cramming copy: long paragraphs and verbose microcopy that should be trimmed to the minimum needed for comprehension"
+        ]
+      },
+      "relatedStyles": ["flat-design", "aurora-ui"],
+      "tags": ["minimal", "clean", "whitespace"]
+    },
+    {
+      "id": "maximalism",
+      "name": "Maximalism",
+      "summary": "'More is more': controlled visual energy built from vibrant colors, patterns, layered imagery, and bold typography.",
+      "sections": {
+        "definition": "Maximalism is the antithesis of minimalism: 'More is more' - flooding space with vibrant colors, patterns, textures, bold typography, and layered imagery stacked on top of each other. The goal is not chaos but controlled visual energy, telling the brand story through visual richness. The boundaries between elements are often deliberately broken.",
+        "principles": [
+          "Full but ordered: despite dense content, a visual axis is needed to guide the eye (a large title, a dominant color) giving the eye an anchor point.",
+          "Clear layering: stack 2-3 layers (background pattern, content block, decorative details) with sufficient contrast between layers.",
+          "Large palette but dominant: 5-7 vibrant colors, with one color occupying ~40-50% of the area to prevent color chaos.",
+          "Bold typography with control: 2-3 font families maximum, using very large sizes for headers as 'anchors' amid the visual density.",
+          "Visual rhythm: alternate dense zones with brief breathing zones so the eye doesn't tire.",
+          "Every element serves the story: patterns, stickers, textures are all related to the brand/content - no random decoration."
+        ],
+        "palette": [
+          { "role": "Dominant color", "hex": "#7C3AED", "notes": "Vivid purple - large backgrounds, titles" },
+          { "role": "Secondary background", "hex": "#FDE047", "notes": "Lemon yellow - large accent blocks" },
+          { "role": "Hot accent", "hex": "#FF3EA5", "notes": "Neon pink - CTAs, badges" },
+          { "role": "Cool accent", "hex": "#22D3EE", "notes": "Cyan - links, hover states" },
+          { "role": "Text contrast", "hex": "#1A1024", "notes": "Deep purple-black - text on light backgrounds" },
+          { "role": "Soft background", "hex": "#FFF1F2", "notes": "Light pink - long content areas" }
+        ],
+        "typography": {
+          "header": { "font": "Clash Display (or Archivo Black, Space Grotesk Bold); Sub-head: Space Grotesk 24-32px / 600", "sizes": "Display: 64-96px / 700, may be uppercase; rotated text (+/-5 degrees), outlined text, or gradient text permitted for headers" },
+          "body": { "font": "Inter; Label/decoration: DM Mono (or Anybody) 12-14px / 500, wide letter-spacing", "sizes": "16-18px / 400-500, line-height 1.5" }
+        },
+        "visualElements": [
+          "Repeating patterns (checkered, zigzag, decorative motifs), stickers, round badge-style stickers",
+          "Multiple geometric chart types: circles + stars + zigzags in the same area",
+          "Bold, multi-color gradients (not the soft, faint aurora style)",
+          "Thick borders 2-4px in black/vivid color, hard offset shadows (4px 4px 0 #000)",
+          "Cut-and-paste images, mixed-media, hand-drawn illustrations mixed with photographs"
+        ],
+        "useCases": [
+          "Entertainment / music / streaming: artist pages, events, festivals - high energy, creates a 'party' feel",
+          "Fashion / streetwear / NFT: brands with strong personality, youth-oriented, wanting to stand out from minimalist competitors",
+          "Creative agencies / marketing campaigns: campaign landing pages needing to make an impression in the first 3 seconds"
+        ],
+        "combinations": {
+          "good": ["brutalism-ui", "collage-art"],
+          "caution": ["retro", "glassmorphism"],
+          "avoid": ["minimalism", "neumorphism", "class-morphism"]
+        },
+        "antiPatterns": [
+          "Chaos without a visual axis: no dominant color or large title to anchor the eye among the density",
+          "Random decoration: patterns, stickers, and textures unrelated to the brand or content story",
+          "Color chaos: more than 3 'hot' colors in the same viewport, or no single dominant color occupying 40-50% of the area"
+        ]
+      },
+      "relatedStyles": ["brutalism-ui", "collage-art"],
+      "tags": ["bold", "vibrant", "patterns", "layers", "expressive"]
+    },
+    {
+      "id": "flat-design",
+      "name": "Flat Design",
+      "summary": "Purely two-dimensional UI with solid colors, simple shapes, and clear boundaries - no 3D effects, born as a reaction to skeuomorphism.",
+      "sections": {
+        "definition": "Flat Design is a purely two-dimensional (2D) style that eliminates all three-dimensional effects such as heavy gradients, shadows, textures, and bevels. Interface elements are represented with solid colors, simple geometric shapes, and clear boundaries. This style originated as a reaction to skeuomorphism of iOS 6 and became widely popular after Microsoft adopted it for Windows 8 (Metro UI) and Apple for iOS 7.",
+        "principles": [
+          "No heavy gradients, no 3D shadows: use only solid colors or very subtle gradients (transition <=15% lightness).",
+          "Basic geometric shapes: rectangles, circles, triangles; consistent border-radius (usually 4-12px).",
+          "High color contrast: choose background and text with contrast ratio >= 4.5:1; use complementary/triadic colors to distinguish groups.",
+          "Clear typography: medium-to-bold weight, large enough size to compensate for the lack of depth-creating shadows.",
+          "Glyph/solid icons: filled or thin-stroke icons, all with solid flat color - no gradients.",
+          "Grid-based layout: align to an 8pt or 4pt grid, with consistent spacing throughout."
+        ],
+        "palette": [
+          { "role": "Primary background", "hex": "#F8FAFC", "notes": "Cool light gray" },
+          { "role": "Block background", "hex": "#3B82F6", "notes": "Blue - most common in flat design" },
+          { "role": "Accent 1", "hex": "#10B981", "notes": "Green - success, secondary CTA" },
+          { "role": "Accent 2", "hex": "#F59E0B", "notes": "Amber - warning" },
+          { "role": "Danger", "hex": "#EF4444", "notes": "Red - error" },
+          { "role": "Primary text", "hex": "#1E293B", "notes": "Dark gray, avoid absolute black" },
+          { "role": "Secondary text", "hex": "#64748B", "notes": "Medium gray" }
+        ],
+        "typography": {
+          "header": { "font": "Nunito Sans (or Open Sans, Source Sans Pro)", "sizes": "H1: 32-48px / 700; H2: 24-32px / 600" },
+          "body": { "font": "Open Sans (or Roboto); UI Label: Open Sans / Nunito Sans 13-14px / 600, uppercase for status labels", "sizes": "15-17px / 400, line-height 1.5" }
+        },
+        "visualElements": [
+          "Flat buttons: solid background, thin or no border, uniform border-radius",
+          "Cards: no shadows (or only a 1px stroke), 8px border-radius",
+          "Images: standard photographs (no filters) or flat vector illustrations",
+          "Icons: single-color glyphs, 20-24px size, 1.5-2px stroke for line icons"
+        ],
+        "useCases": [
+          "Cross-platform mobile apps: Uber, Spotify (core UI), utility apps - flat design loads fast and enables quick visual recognition",
+          "Dashboard / Analytics: flat-color charts, clean tables - data stands out without 'noise' from decoration",
+          "Corporate websites: landing pages, product introductions - delivers messages directly and professionally"
+        ],
+        "combinations": {
+          "good": ["neumorphism", "aurora-ui", "glassmorphism"],
+          "caution": ["skeuomorphism"],
+          "avoid": ["maximalism", "collage-art"]
+        },
+        "antiPatterns": [
+          "Reintroducing depth: heavy gradients, 3D shadows, bevels, or textures that break the 2D essence",
+          "Low-contrast color pairs: background/text combinations below the 4.5:1 contrast ratio",
+          "Gradient-filled or multicolor icons that break the solid single-color glyph rule"
+        ]
+      },
+      "relatedStyles": ["minimalism", "neumorphism"],
+      "tags": ["flat", "2d", "solid-colors", "geometric"]
+    },
+    {
+      "id": "neumorphism",
+      "name": "Neumorphism",
+      "summary": "Soft, tactile UI where elements appear 'pushed out' or 'pressed in' using symmetrical soft shadows on a unified background.",
+      "sections": {
+        "definition": "Neumorphism (New + Skeuomorphism) creates an effect of elements 'pushed out' or 'pressed in' from the surface, mimicking the tactile feel of soft materials (rubber, smooth plastic, silicone) on a flat background. Unlike old skeuomorphism (which simulated real materials like wood, leather), neumorphism relies solely on soft shadows to create depth without complex textures or gradients. The background and elements typically share the same hue, differing only in lightness.",
+        "principles": [
+          "Background and elements share the same hue: background, buttons, and cards all belong to the same color group, differing only in lightness by +/-10%.",
+          "Symmetrical soft shadows: one light shadow on the top-left corner and one dark shadow on the bottom-right corner, with equal blur and spread - this is the core technique.",
+          "No clear borders: no border, no outline - boundaries are created entirely through shadow.",
+          "Prefers neutral backgrounds: light gray background (light mode) is the most common environment; dark mode requires shadow inversion (lighter instead of darker).",
+          "Clear interaction feedback: when pressed, shadows reverse (shadow becomes inner shadow) creating a 'pressed in' feel; hover states need subtle transitions.",
+          "Consistent border-radius: rounded corners of 16-24px uniformly across elements, creating a soft, tactile feel."
+        ],
+        "palette": [
+          { "role": "Primary background (light)", "hex": "#E4E9F2", "notes": "Warm gray-white - most common background" },
+          { "role": "Primary background (dark)", "hex": "#2D3748", "notes": "Dark gray - for dark mode" },
+          { "role": "Element (light)", "hex": "#ECF0F3", "notes": "5-8% lighter than background" },
+          { "role": "Light shadow", "hex": "#FFFFFF (70% opacity)", "notes": "Top-left corner" },
+          { "role": "Dark shadow", "hex": "#A3B1C6 (50% opacity)", "notes": "Bottom-right corner" },
+          { "role": "Accent color", "hex": "#6C63FF", "notes": "Soft purple - used for icons/active states only" },
+          { "role": "Primary text", "hex": "#4A5568", "notes": "Medium-dark gray, not too dark" }
+        ],
+        "typography": {
+          "header": { "font": "Poppins (or Nunito, Quicksand)", "sizes": "H1: 36-48px / 500-600; H2: 24-28px / 500" },
+          "body": { "font": "Poppins; UI Label: Poppins 13-14px / 500", "sizes": "15-16px / 400, line-height 1.6" }
+        },
+        "visualElements": [
+          "Soft UI: shadow blur 20-40px, spread 5-15px, no hard edges",
+          "Inner shadow on press: inset shadow instead of drop shadow",
+          "No thin-stroke icons - use solid (filled) icons so they 'pop' from the background",
+          "Sliders, toggles, inputs: 'embedded' style (sinking into the surface) instead of 'raised'",
+          "Cards may be slightly raised; list items are flat-inset style"
+        ],
+        "useCases": [
+          "Fitness / wellness apps: Apple Fitness+, meditation apps - soft, friendly feel, gentle on the eyes",
+          "Personal tools: smart home remote, IoT control app - the tactile 'touchable' feel creates user affinity",
+          "Lightweight portfolios: personal pages, profile apps - creates a refined feel, distinct from flat design"
+        ],
+        "combinations": {
+          "good": ["flat-design", "class-morphism"],
+          "caution": ["aurora-ui", "glassmorphism"],
+          "avoid": ["brutalism-ui", "skeuomorphism", "maximalism"]
+        },
+        "antiPatterns": [
+          "Mixing neumorphic elements with high-contrast flat elements in the same component zone",
+          "Inconsistent shadow symmetry: unequal blur/spread or mismatched light/dark shadow angles",
+          "Data-heavy dashboards: neumorphism is unsuitable for data-dense interfaces because subtle shadows don't provide enough layer differentiation"
+        ]
+      },
+      "relatedStyles": ["claymorphism", "class-morphism", "flat-design"],
+      "tags": ["soft", "tactile", "shadows", "subtle-depth"]
+    },
+    {
+      "id": "claymorphism",
+      "name": "Claymorphism",
+      "summary": "3D rounded, soft, squeezable clay-like UI with internal gradients, super-rounded corners, and floating multi-layer shadows.",
+      "sections": {
+        "definition": "Claymorphism is a variant of Neumorphism but with the 'material' characterized by clay - creating a 3D rounded, soft, slightly squeezable feel. This style rose from Apple's design trend (clearly visible from iOS 14 onward, especially iOS 15 widgets and macOS Big Sur icons). Unlike Neumorphism: (1) it typically uses internal gradients instead of simple shadows, (2) much larger border-radius, (3) often includes a sharp corner highlight, and (4) colors can be more diverse.",
+        "principles": [
+          "Internal gradient (inner gradient): each block has a subtle gradient from top to bottom (or from a corner outward) simulating light on a curved surface; distinct from a flat background.",
+          "Super-rounded corners: border-radius of 24-48px or fully circular (50%) - creating shapes like molded clay pieces.",
+          "Multi-layer shadows: typically 2 shadows: one small soft shadow (near shadow) and one large blurred shadow (far shadow) to create a strong 'floating' effect.",
+          "Corner highlight: a bright white/muted zone at the top or center-top, simulating reflected light on a curved surface.",
+          "More saturated colors than Neumorphism: not required to share hue with the background; can use multiple color groups, but each block has an internal gradient.",
+          "Thin borders: often a 1px transparent or subtle border creating a 'curved edge' look-through effect, especially when blocks overlap."
+        ],
+        "palette": [
+          { "role": "Primary background", "hex": "#E8EEF5", "notes": "Light blue-gray - common Apple-ish background" },
+          { "role": "Clay block 1", "hex": "#7C3AED -> #8B5CF6", "notes": "Purple gradient, 32px border-radius" },
+          { "role": "Clay block 2", "hex": "#F472B6 -> #FB7185", "notes": "Pink-coral gradient" },
+          { "role": "Clay block 3", "hex": "#34D399 -> #6EE7B7", "notes": "Mint green gradient" },
+          { "role": "Highlight", "hex": "#FFFFFF (40-60% opacity)", "notes": "Light zone at the top" },
+          { "role": "Near shadow", "hex": "#000000 (10% opacity)", "notes": "Small, sharp shadow" },
+          { "role": "Far shadow", "hex": "#6366F1 (15% opacity)", "notes": "Large, blurred shadow, subtle purple tint" }
+        ],
+        "typography": {
+          "header": { "font": "SF Pro Rounded (or Nunito, Poppins)", "sizes": "H1: 36-48px / 600-700" },
+          "body": { "font": "SF Pro Rounded; Label: SF Pro Rounded 12-14px / 500", "sizes": "15-17px / 400, line-height 1.5" }
+        },
+        "visualElements": [
+          "Icons: filled style, large rounded corners, often placed inside fully circular clay containers",
+          "Buttons: 50% border-radius, top-corner highlight, light shadow underneath",
+          "Cards/Widgets: larger blocks, 24-40px border-radius, more prominent internal gradients",
+          "Input fields: transparent border but inner shadow creating a 'pressed-in' feel",
+          "Borders are typically absent - boundaries are created by shadow alone"
+        ],
+        "useCases": [
+          "iOS/macOS widgets & app icons: this is the most natural environment for claymorphism",
+          "Fitness/Health apps: exercise icons, calorie trackers, habit trackers - creates a fun, colorful, youth-friendly feel",
+          "Lightweight dashboards: small widgets on smart dashboards, not for large data tables"
+        ],
+        "combinations": {
+          "good": ["aurora-ui", "glassmorphism"],
+          "caution": ["flat-design"],
+          "avoid": ["neumorphism", "brutalism-ui"]
+        },
+        "antiPatterns": [
+          "Forgetting the internal gradient: a clay block without a top-to-bottom gradient is just a rounded neumorphic card",
+          "Using non-rounded fonts (e.g., Arial Black) alongside clay blocks, creating severe visual conflict",
+          "Mixing neumorphism and claymorphism in the same viewport without clear zone separation"
+        ]
+      },
+      "relatedStyles": ["neumorphism", "aurora-ui", "glassmorphism"],
+      "tags": ["3d", "rounded", "clay", "floating", "apple-style"]
+    },
+    {
+      "id": "aurora-ui",
+      "name": "Aurora UI",
+      "summary": "Living, animated light layers mimicking the aurora borealis - multi-layer gradients, bokeh, shimmer, and glass panels.",
+      "sections": {
+        "definition": "Aurora UI is a style that uses dynamic, soft light like the aurora borealis - multi-layered gradients overlapping, seamlessly transitioning colors, often combined with shimmer effects, high blur, and smooth motion. This style is closely associated with Apple (macOS Sonoma, iOS 17 animated wallpapers, visionOS) and high-end tech brands wanting to convey a futuristic, magical, and living feel. The core element is 'light that feels real' - gradients are not flat, they have depth and motion.",
+        "principles": [
+          "Multi-layer gradients: at least 2-3 overlapping gradients at different angles, creating a 'light layer' with depth.",
+          "High blur (Bokeh effect): bright areas are often heavily blurred (40-80px) to create 'light orb' effects similar to photography.",
+          "Smooth motion: gradients/light move slowly (8-20s cycle), using CSS animation or Lottie; transitions are subtle, not attention-grabbing.",
+          "Natural yet vibrant colors: blues, purples, pinks, greens - colors reminiscent of real aurora.",
+          "Avoid hard contrast: no thick black lines, no heavy dark text on aurora backgrounds - use white text with soft shadow instead.",
+          "Backdrop blur for content: when placing content over aurora, use backdrop-filter: blur() or glass panels."
+        ],
+        "palette": [
+          { "role": "Background layer 1", "hex": "#0F0C29", "notes": "Deep purple-black - creates depth" },
+          { "role": "Background layer 2", "hex": "#302B63", "notes": "Dark purple" },
+          { "role": "Light layer 1", "hex": "#6366F1", "notes": "Indigo - central light area" },
+          { "role": "Light layer 2", "hex": "#06B6D4", "notes": "Cyan - cool light area" },
+          { "role": "Light layer 3", "hex": "#A855F7", "notes": "Purple-pink - warm alternating area" },
+          { "role": "Accent", "hex": "#22D3EE", "notes": "Bright cyan - icons, highlights" },
+          { "role": "Text", "hex": "#FFFFFF (90% opacity)", "notes": "Soft white, light shadow" }
+        ],
+        "typography": {
+          "header": { "font": "SF Pro Display (or Geist, Inter)", "sizes": "Display: 48-72px / 600-700, soft text-shadow; Header: 28-36px / 600" },
+          "body": { "font": "SF Pro Text (or Inter); Label: SF Pro Text 12-14px / 500, letter-spacing 0.05em", "sizes": "15-17px / 400-500, 85-90% opacity" }
+        },
+        "visualElements": [
+          "Animated background: slow-moving gradients, infinite loop",
+          "Light orbs: blurred circles floating on the background",
+          "Glass cards: transparent frosted panels (backdrop-filter: blur(20px), background: rgba(255,255,255,0.1)) placed over aurora",
+          "Shimmer effect: a light streak running across a surface to simulate 'real light'",
+          "Icons: white thin strokes or filled white - never dark colors on aurora backgrounds"
+        ],
+        "useCases": [
+          "Operating systems & devices: macOS Sonoma, iOS 17+, visionOS, Android 12+ dynamic color - aurora is a platform-level trend",
+          "Streaming / gaming apps: Spotify (new version), Discord (dark mode), Epic Games launcher - creates a living space for younger users",
+          "Premium Web3/AI/Fintech brands: landing pages for high-end tech products wanting to convey innovation and the future"
+        ],
+        "combinations": {
+          "good": ["class-morphism", "flat-design", "glassmorphism"],
+          "caution": ["neumorphism"],
+          "avoid": ["brutalism-ui", "skeuomorphism", "retro"]
+        },
+        "antiPatterns": [
+          "Placing detailed photographs or live video directly over aurora without an intermediate glass overlay",
+          "Using thick black lines or heavy dark text on aurora backgrounds - destroys the soft light aesthetic",
+          "Over-animating: gradients that move too fast or are too attention-grabbing (cycle should be 8-20s minimum)"
+        ]
+      },
+      "relatedStyles": ["claymorphism", "class-morphism", "flat-design", "glassmorphism"],
+      "tags": ["aurora", "gradients", "animated", "glass", "bokeh", "light"]
+    },
+    {
+      "id": "brutalism-ui",
+      "name": "Brutalism UI",
+      "summary": "Raw, unpolished anti-design with system fonts, thick black borders, basic colors, and intentional visual disorder.",
+      "sections": {
+        "definition": "Brutalism UI in web/digital design is a 'raw, bare, unpolished' style - inspired by architectural brutalism (exposing raw concrete), but applied to digital interfaces. Elements are presented in their raw form: system fonts, basic background colors, gridless or very rough layouts, obvious hover states, and content displayed almost without processing. The goal is to break aesthetic conventions to create attention, uniqueness, and deliberate anti-design.",
+        "principles": [
+          "System or 'raw' fonts: use Arial, Courier New, Times New Roman, or dedicated brutalist fonts like Archivo Black, Monoton - not professionally designed 'beautiful' fonts.",
+          "Unsophisticated basic colors: bright yellow, light red, lime green, candy pink - usually unnatural colors, CSS color keywords like yellow, red, blue.",
+          "Intentional disorderly layout: may use skewed arrangement, slight overlaps, imperfectly aligned elements; but there's a hidden visual logic.",
+          "Thick black borders: 2-4px borders surrounding most blocks; this is the strongest identifier.",
+          "Obvious hover states: background color change, color inversion, or white/black text highlighting.",
+          "No soft shadows: if shadows exist, they are hard shadows (4px 4px 0 #000) or no shadows at all.",
+          "'Raw' navigation: can be text link lists, DOS-style buttons, or the simplest possible menu."
+        ],
+        "palette": [
+          { "role": "Primary background", "hex": "#FFFEF0", "notes": "Off-white - 'paper' feel" },
+          { "role": "Accent 1", "hex": "#FFE600", "notes": "Bright yellow - large block backgrounds" },
+          { "role": "Accent 2", "hex": "#FF5C00", "notes": "Orange-red - CTAs" },
+          { "role": "Accent 3", "hex": "#FF00FF", "notes": "Bright magenta - hover states" },
+          { "role": "Text", "hex": "#000000", "notes": "Absolute black" },
+          { "role": "Accent", "hex": "#00FF00", "notes": "Terminal green - for highlights" }
+        ],
+        "typography": {
+          "header": { "font": "Archivo Black (or Impact, Arial Black)", "sizes": "Display: 48-120px / 900, uppercase" },
+          "body": { "font": "Courier New (or Space Mono, Roboto Mono); UI Label: Arial (or Helvetica) 14-16px / 700", "sizes": "16-18px / 400-700. Monospace fonts are the most popular choice in brutalism UI." }
+        },
+        "visualElements": [
+          "2-4px black borders around almost everything",
+          "Hard shadow: box-shadow: 4px 4px 0px #000;",
+          "'Raw' checkbox/button: browser-native interface, unstyled",
+          "Imperfect grid: blocks slightly misaligned, creating a 'rushed' or 'deliberately wrong' feel",
+          "Thick underlines for links: 3px underline, no hover underline",
+          "Marquee text, scrolling text, simple text animations"
+        ],
+        "useCases": [
+          "Creative agency portfolios: Balenciaga, Bloomberg (old version), design studios wanting to be completely different",
+          "Tech startups / developer tooling: developer tools (pages like old figma.com, glitch.me) - brutalism conveys 'we don't care about appearance, function is what matters.'",
+          "Rebellious brands / digital art: streetwear brands, digital artists, NFTs - expressing strong personality"
+        ],
+        "combinations": {
+          "good": ["maximalism", "retro"],
+          "caution": [],
+          "avoid": ["neumorphism", "claymorphism", "aurora-ui", "class-morphism", "glassmorphism"]
+        },
+        "antiPatterns": [
+          "Soft shadows or rounded corners: anything that smooths or prettifies the 'raw' aesthetic",
+          "Gray colors: either #000 or #FFF with high-contrast unnatural colors - muted intermediate colors break the brutalist palette rule",
+          "Combining with Neumorphism, Claymorphism, or Aurora UI: diametrically opposite in every element, producing an 'indecisive mix'"
+        ]
+      },
+      "relatedStyles": ["maximalism", "retro"],
+      "tags": ["raw", "bold", "anti-design", "borders", "system-fonts"]
+    },
+    {
+      "id": "collage-art",
+      "name": "Collage Art",
+      "summary": "Layered, mixed-media composite with overlapping images, text, and illustrations at varied scales and blend modes.",
+      "sections": {
+        "definition": "Collage Art in UI/UX is a style that uses multiple layers of images, text, illustrations, and graphic elements cut, pasted, and overlapping to create a vibrant composite (collage). Unlike purely artistic paper collage (handmade, cut-and-paste), Collage Art in digital UI is adapted for digital interfaces: it must be readable, interactive, and maintain usability. Each layer typically has different opacity, creating a visual 'layered' effect.",
+        "principles": [
+          "Layering with depth: 3-5 overlapping layers, each with different opacity (60-90%) and blend modes (multiply, screen, overlay).",
+          "Varied scales and angles: images in the collage are often cropped, rotated, scaled non-standardly - creating energy and asymmetry.",
+          "Diverse fonts in one viewport: combine 2-3 font families (serif + sans-serif + display) to increase the 'cut-and-paste' feel.",
+          "Background texture: paper scraps, canvas fabric, film grain - texture creates a tangible material feel.",
+          "Non-uniform colors: each layer has its own color palette, creating richness; but there should be one dominant color for coherence.",
+          "Content remains readable: despite busyness, main text and CTAs must stand out and be easy to read - use solid backgrounds behind text if needed."
+        ],
+        "palette": [
+          { "role": "Textured background", "hex": "#F5F0E8", "notes": "Cream - aged paper" },
+          { "role": "Layer 1", "hex": "#C026D3", "notes": "Magenta - vivid color layer" },
+          { "role": "Layer 2", "hex": "#F59E0B", "notes": "Orange - warm layer" },
+          { "role": "Layer 3", "hex": "#06B6D4", "notes": "Cyan - cool layer" },
+          { "role": "Text overlay", "hex": "#FFFFFF", "notes": "White on dark colors" },
+          { "role": "Text on solid", "hex": "#1E293B", "notes": "Dark blue-gray - text with solid background" }
+        ],
+        "typography": {
+          "header": { "font": "Playfair Display (classic serif); Accent text: Staatliches (or Bebas Neue) 24-48px / 400, wide letter-spacing", "sizes": "Display: 48-80px / 700, may be italic; Sub-head: Space Grotesk 20-28px / 500" },
+          "body": { "font": "DM Sans (or Libre Baskerville)", "sizes": "14-16px / 400. Combine serif + sans-serif + display - not limited to 1 family." }
+        },
+        "visualElements": [
+          "Non-standard-ratio cropped images",
+          "Background textures: paper, cardboard, fabric, film grain",
+          "Shape masks: circles, stars, freeform shapes - not just rectangles",
+          "Tape/pins/stickers: elements holding layers together (masking tape, pushpins, stickers)",
+          "Partial overlaps: elements overlapping completely or only partially (half-overlap)"
+        ],
+        "useCases": [
+          "Editorial/Magazine websites: online magazines, fashion blogs, culture pages - collage fits art-focused content",
+          "Art/creative brands: design studios, artists, content creators - expressing personality and diversity",
+          "Campaign/Event landing pages: event pages, advertising campaigns - attracting attention with rich imagery"
+        ],
+        "combinations": {
+          "good": ["brutalism-ui", "maximalism"],
+          "caution": ["retro", "glassmorphism"],
+          "avoid": ["neumorphism", "minimalism", "class-morphism"]
+        },
+        "antiPatterns": [
+          "Layers with competing opacities that make content and hierarchy unreadable",
+          "Too many font families (>3) resulting in visual noise rather than the intentional 'cut-and-paste' variety",
+          "Combining with Neumorphism or Minimalism: collage requires visual richness while minimalism/neumorphism require simplicity - fundamentally incompatible"
+        ]
+      },
+      "relatedStyles": ["maximalism", "brutalism-ui"],
+      "tags": ["collage", "layers", "mixed-media", "textures", "overlapping"]
+    },
+{
+      "id": "skeuomorphism",
+      "name": "Skeuomorphism",
+      "summary": "Real-world material mimicry: leather, wood, metal textures with multi-layer shadows and physical button interactions.",
+      "sections": {
+        "definition": "Skeuomorphism is a design style that mimics real-world objects in digital interfaces: the interface looks like real materials (leather, wood, metal) or real objects (calculators, notebooks, radios). This was the most popular style from 2007-2012 (Apple iOS before iOS 7, Windows Vista/7, Apple apps before 2013), before being replaced by Flat Design. Today, skeuomorphism is used selectively for contexts that need to create familiarity or a nostalgic feeling.",
+        "principles": [
+          "Mimic real materials: leather (texture), wood (grain), metal (heavy gradient + highlight), paper (soft shadow).",
+          "Clear depth: multiple shadow layers creating depth - drop shadow + bottom shadow + top highlight.",
+          "Bevel and Emboss: create raised/pressed effects using border gradients (light on top = raised, dark on top = pressed).",
+          "Repeating textures: material patterns (leather, linen, wood grain) as background, visible even on areas without content.",
+          "Physical buttons: buttons have raised shapes, with clear 'pressed-down' states using inner shadow and gradient.",
+          "Physical interaction feedback: when pressed, buttons sink; volume sliders have grooves; switches have obvious on/off states."
+        ],
+        "palette": [
+          { "role": "Brown leather background", "hex": "#8B5A2B", "notes": "Leather brown" },
+          { "role": "Black leather", "hex": "#3D3D3D", "notes": "Black leather (iPod classic)" },
+          { "role": "Light wood", "hex": "#C4A574", "notes": "Light wood yellow" },
+          { "role": "Silver metal", "hex": "#C0C0C0 -> #E8E8E8", "notes": "Metal gradient" },
+          { "role": "Gold metal", "hex": "#D4AF37 -> #FFD700", "notes": "Brass/gold" },
+          { "role": "Highlight", "hex": "#FFFFFF (30% opacity)", "notes": "Light on the surface" },
+          { "role": "Dark shadow", "hex": "#000000 (30-50% opacity)", "notes": "Drop shadow" }
+        ],
+        "typography": {
+          "header": { "font": "Georgia (or Palatino, Rockwell)", "sizes": "H1: 32-48px / 700, bold serif" },
+          "body": { "font": "Trebuchet MS (or Verdana); Digital display: Digital-7 Mono (or LCD mono) 24-48px", "sizes": "15-17px / 400, readable. Serif fonts (Georgia, Palatino) or 'soft' sans-serif (Trebuchet) fit the realistic material feel." }
+        },
+        "visualElements": [
+          "Background textures: leather, linen, wood, metal - used as background for the entire interface or for specific panels",
+          "Bevel border: 1px gradient border with light on top and dark on bottom to create a raised effect",
+          "Multi-layer drop shadow: outer shadow + inner shadow combined",
+          "Complex gradients: instead of flat colors, use multi-stop gradients to simulate light on a 3D surface",
+          "3D icons: icons with depth, shadow, and highlight - not 2D glyphs"
+        ],
+        "useCases": [
+          "Music/audio apps: music players, guitar tuners, DJ apps - mimicking audio equipment (equalizers, cassette players, turntables) creates familiarity",
+          "Game UI / Immersive apps: mobile games, simulator apps (flight simulators, racing dashboards) - skeuomorphism creates a 'touchable' feel",
+          "Nostalgic/retro products: notebook-style note apps, virtual garden apps - creates emotional connection"
+        ],
+        "combinations": {
+          "good": ["retro"],
+          "caution": ["flat-design"],
+          "avoid": ["neumorphism", "claymorphism", "aurora-ui", "class-morphism", "glassmorphism"]
+        },
+        "antiPatterns": [
+          "Mixing multiple material textures (leather + wood + metal) on a single screen without a clear dominant material",
+          "Combining with neumorphic or glassmorphic shadows in the same component, causing chaotic depth",
+          "Over-skeuomorphic UI in modern contexts: today's users expect cleaner, faster-loading interfaces - use selectively"
+        ]
+      },
+      "relatedStyles": ["retro"],
+      "tags": ["material", "texture", "realistic", "depth", "nostalgic"]
+    },
+    {
+      "id": "retro",
+      "name": "Retro",
+      "summary": "Era-inspired aesthetics from the 1950s through 1990s - distinct palettes, typography, and graphic motifs for each decade.",
+      "sections": {
+        "definition": "Retro in UI/UX is a style inspired by past decades - typically the 1950s (Americana/diner), 1960s (psychedelic), 1970s (disco/bohemian), 1980s (synthwave/neon), or 1990s (early web/Y2K). Unlike skeuomorphism which mimics materials, Retro focuses on the aesthetic of an era: color palettes, typography, graphic motifs, and the overall feel of a time period. This is a style with strong storytelling - each decade has its own narrative.",
+        "principles": [
+          "Clearly identify the decade: each era has distinct palettes, fonts, and motifs; do not mix multiple decades in one viewport (unless intentionally collaging).",
+          "Era-specific palettes: 1950s = pastels + cherry red/neon orange; 1970s = terra cotta, brown, mustard, olive green; 1980s = neon purple, cyan, electric pink, black; 1990s = neutral blues, gray, deep purple, white.",
+          "Period-appropriate typography: use vintage fonts from each era (see Typography section).",
+          "Period-specific graphic motifs: scanline, halftone dot, sunburst, chevron pattern, multi-directional typography.",
+          "Analog textures: film grain, scan lines, dithering - evoking analog media."
+        ],
+        "palette": [
+          { "role": "Synthwave dark background", "hex": "#0D0221", "notes": "80s synthwave dark background" },
+          { "role": "Synthwave neon purple", "hex": "#FF00FF", "notes": "80s neon purple" },
+          { "role": "Synthwave neon pink", "hex": "#FF6EC7", "notes": "80s neon pink" },
+          { "role": "Synthwave neon cyan", "hex": "#00FFFF", "notes": "80s neon cyan" },
+          { "role": "Synthwave hot yellow", "hex": "#FFE900", "notes": "80s neon yellow" },
+          { "role": "Y2K white background", "hex": "#F0F0F0", "notes": "90s Y2K light background" },
+          { "role": "Y2K teal", "hex": "#008080", "notes": "90s Windows teal" },
+          { "role": "Y2K deep purple", "hex": "#663399", "notes": "90s deep purple" },
+          { "role": "Y2K silver desktop", "hex": "#C0C0C0", "notes": "90s silver desktop" },
+          { "role": "Y2K navy", "hex": "#000080", "notes": "90s classic navy" },
+          { "role": "50s cherry red", "hex": "#FF2D2D", "notes": "Diner style cherry red" },
+          { "role": "50s mint green", "hex": "#98FF98", "notes": "Diner style mint" },
+          { "role": "50s cream yellow", "hex": "#F7E7CE", "notes": "Diner style cream" },
+          { "role": "50s bubblegum pink", "hex": "#FFB6C1", "notes": "Diner style pink" },
+          { "role": "50s milk white", "hex": "#FFFDD0", "notes": "Diner style milk white" }
+        ],
+        "typography": {
+          "header": { "font": "1950s: Lobster / Pacifico; 1970s: Righteous / Satisfy; 1980s: Press Start 2P / Orbitron; 1990s: Eurostile / Arial Black", "sizes": "8-bit/pixel fonts (Press Start 2P) for display + screen fonts (VT323) for body is the most common 80s pairing" },
+          "body": { "font": "1950s: Open Sans / Lato; 1970s: Roboto Slab / Merriweather; 1980s: VT323 / Share Tech Mono; 1990s: Verdana / Trebuchet MS", "sizes": "Body size varies by era; pixel fonts 8-16px / monospace 14-18px / readable serifs 15-17px" }
+        },
+        "visualElements": [
+          "Scanline: thin horizontal lines overlaid on images, creating a CRT monitor effect",
+          "Halftone: small dots arranged in patterns, creating a classic print effect",
+          "Sunburst: rays bursting from a center point, popular in 50s-60s design",
+          "Neon glow: glow effects around text/icons for 80s synthwave",
+          "Grunge texture: dirty, worn textures on surfaces - popular in 90s retro"
+        ],
+        "useCases": [
+          "Retro/indie games: pixel art games, arcade games - retro UI enhances immersion",
+          "Vintage-inspired fashion brands: online stores with retro inspiration - creates a period atmosphere",
+          "Music/entertainment: album covers, synthwave/indie artist websites - retro is the natural style of the genre",
+          "Nostalgia campaigns: brands wanting to connect with memories, 'golden era' nostalgia"
+        ],
+        "combinations": {
+          "good": ["brutalism-ui", "skeuomorphism"],
+          "caution": ["maximalism", "collage-art"],
+          "avoid": ["minimalism", "neumorphism", "glassmorphism"]
+        },
+        "antiPatterns": [
+          "Mixing multiple decades (50s + 80s + 90s) in a single viewport without intentional collage framing",
+          "Using modern sans-serif fonts (Inter, Roboto) within a retro aesthetic, breaking period authenticity",
+          "Retro requires visual richness: applying retro palette and motifs to a sparse, empty layout loses the era's spirit"
+        ]
+      },
+      "relatedStyles": ["brutalism-ui", "skeuomorphism"],
+      "tags": ["retro", "nostalgic", "era-specific", "synthwave", "vintage"]
+    },
+    {
+      "id": "class-morphism",
+      "name": "Class Morphism",
+      "summary": "Elegant classicism meets morphic depth: golden ratio layouts, warm shadows, glass panels, and refined serif typography.",
+      "sections": {
+        "definition": "Class Morphism (also known as 'Classy Morphism') is a style that combines the elegance of Classicism with the depth principles of Morphism (neumorphism, glassmorphism). This style features: (1) golden ratio, symmetrical balance like classical design; (2) soft shadows and/or backdrop blur like morphic design; (3) warm, contemplative palettes instead of overly vibrant ones; and (4) medium-weight serif typography. Overall, Class Morphism creates a 'luxurious, contemplative, with depth' feel - suitable for luxury brands and premium products.",
+        "principles": [
+          "Golden ratio / Symmetrical balance: layouts use 1:1.618 or 3:5 ratios, elements arranged symmetrically or near-symmetrically - different from asymmetrical modern design.",
+          "Gentle morphic effects: warm soft shadows (not cold shadows like pure neumorphism) or subtle glass effect - creating depth without being overly 'popping.'",
+          "Warm, contemplative palette: avoid neon colors, overly pale pastels; prioritize blush, deep navy, champagne gold, off-white, dusty rose.",
+          "Not overly decorative: take the spirit of classicism but don't use too many ornaments (florals, ripples); use only 1-2 meaningful decorative elements.",
+          "Generous spacing: ample white space, comfortable margins - luxury is expressed through spatial abundance.",
+          "Subtle texture: may use subtle texture (silk, faint stone grain) for backgrounds, not too obvious."
+        ],
+        "palette": [
+          { "role": "Primary background", "hex": "#F5F0EB", "notes": "Warm off-white - creates quality paper feel" },
+          { "role": "Glass background", "hex": "#FFFFFF (30-50% opacity)", "notes": "Transparent panel over background" },
+          { "role": "Dominant color", "hex": "#1C3A5F", "notes": "Deep navy - composed, luxurious" },
+          { "role": "Accent", "hex": "#C9A96E", "notes": "Champagne gold - gentle highlight" },
+          { "role": "Soft accent", "hex": "#BFA89E", "notes": "Dusty rose - naturally warm color" },
+          { "role": "Shadow", "hex": "#8B7355 (12% opacity)", "notes": "Warm shadow, not cold gray" },
+          { "role": "Primary text", "hex": "#1A1A1A", "notes": "Soft black" },
+          { "role": "Secondary text", "hex": "#6B5B4F", "notes": "Warm gray-brown" }
+        ],
+        "typography": {
+          "header": { "font": "Playfair Display (or Cormorant Garamond)", "sizes": "Display: H1 40-56px / 500-600, italic variant; Header: H2 28-36px / 500" },
+          "body": { "font": "Lora (or Source Serif Pro); Label: Jost (or Montserrat) 12-13px / 500, letter-spacing 0.08em", "sizes": "16-18px / 400, line-height 1.7. Serif dominates; may use Jost (light geometric sans) for labels and captions." }
+        },
+        "visualElements": [
+          "Glass cards: backdrop-filter: blur(15px), background rgba(255,255,255,0.35), border 1px solid rgba(255,255,255,0.5)",
+          "Warm shadows: box-shadow: 0 8px 32px rgba(139,115,85,0.12) - not cold gray shadows",
+          "Icons: thin 1px strokes, muted colors, usually outline style",
+          "Dividers: thin decorative lines, may have a small ornament in the center",
+          "Subtle patterns: classic motifs (faint damask, thin stripes) as background, very low opacity (5-10%)"
+        ],
+        "useCases": [
+          "Luxury brand / jewelry: luxury brand websites, auction houses - class morphism conveys value, elegance, and artistic quality",
+          "Premium real estate: luxury property landing pages, interior design - creates an upscale living space feel",
+          "Wedding / event planning: event websites, wedding pages - warm palette and serif typography fit the refined, romantic theme",
+          "Premium editorial: luxury online magazines, lifestyle blogs - editorial style with depth"
+        ],
+        "combinations": {
+          "good": ["aurora-ui", "glassmorphism"],
+          "caution": [],
+          "avoid": ["maximalism", "brutalism-ui", "collage-art"]
+        },
+        "antiPatterns": [
+          "Using neon or overly vibrant colors (#00FFFF, #FF00FF) - breaks the warm, contemplative palette",
+          "Too many ornaments (excessive florals, ripples, decorative borders) - takes the spirit of classicism but loses the modern refinement",
+          "Asymmetrical layouts with imbalanced whitespace - class morphism values golden ratio and symmetrical balance"
+        ]
+      },
+      "relatedStyles": ["aurora-ui", "neumorphism", "glassmorphism"],
+      "tags": ["luxury", "elegant", "serif", "gold", "warm", "glass"]
+    },
+    {
+      "id": "glassmorphism",
+      "name": "Glassmorphism",
+      "summary": "Frosted glass panels: semi-transparent fills, backdrop blur, 1px light borders, and soft shadows layered over vibrant backgrounds.",
+      "sections": {
+        "definition": "Glassmorphism is a style based on frosted glass panels: elements use semi-transparent backgrounds combined with background blur (backdrop-filter: blur()), a 1px light border, and soft shadows to create a 'frosted glass sheet floating above content' feel. Foreshadowed by Windows Vista Aero and popularized by Apple (iOS 7 Control Center, macOS Big Sur, visionOS) and Microsoft Fluent Design. The core element is layered depth: a vibrant/blurred background behind, the glass panel in the middle, content on top - glass is only effective when there is something colorful behind it to blur.",
+        "principles": [
+          "Semi-transparent background: glass panels use rgba(255,255,255,0.10-0.40) in light mode or rgba(20,20,30,0.30-0.50) in dark mode - enough to blur the background while maintaining readability.",
+          "Backdrop blur is mandatory: backdrop-filter: blur(10-30px), optionally with saturate(180%) to enhance content vibrancy showing through - no blur, no glass.",
+          "1px light border: a thin border rgba(255,255,255,0.3-0.6) creates the 'glass edge' that catches the light - the strongest identifier.",
+          "Vibrant background behind: glass panels must sit on colorful gradients, images, or bokeh shapes; on a flat white/gray background the effect is invisible.",
+          "Light text: white text with 90-100% opacity (plus soft text-shadow if needed) to ensure contrast on the glass panel.",
+          "Hierarchy through transparency levels: 2-3 transparency levels (e.g., 30% for main cards, 15% for secondary panels) distinguish hierarchy without borders."
+        ],
+        "palette": [
+          { "role": "Background gradient 1", "hex": "#667EEA", "notes": "Indigo - gradient start" },
+          { "role": "Background gradient 2", "hex": "#764BA2", "notes": "Purple - gradient end, accent" },
+          { "role": "Glass fill", "hex": "#FFFFFF (10-20% opacity)", "notes": "Glass card fill" },
+          { "role": "Glass border", "hex": "#FFFFFF (30-60% opacity)", "notes": "1px border creating the light-catching edge" },
+          { "role": "Primary text", "hex": "#FFFFFF (95-100% opacity)", "notes": "White text on glass" },
+          { "role": "Secondary text", "hex": "#FFFFFF (60-75% opacity)", "notes": "Meta, caption" },
+          { "role": "Ambient shadow", "hex": "#1F2687 (20% opacity)", "notes": "Soft dark purple shadow below the panel" }
+        ],
+        "typography": {
+          "header": { "font": "Inter (or SF Pro Display)", "sizes": "H1: 40-64px / 600-700" },
+          "body": { "font": "Inter (or SF Pro Text); Label: Inter 12-14px / 500, letter-spacing 0.05em", "sizes": "15-17px / 400-500, line-height 1.5. All text on glass must be white or near-white." }
+        },
+        "visualElements": [
+          "Glass cards: rgba(255,255,255,0.15) fill + backdrop-filter: blur(20px) saturate(180%) + 1px rgba(255,255,255,0.3) border, 16-24px radius",
+          "Floating layers: 2-3 glass layers at different transparency/blur levels creating depth",
+          "Colorful blobs behind: gradient spots or large bokeh circles placed behind the glass panel",
+          "Soft shadow: box-shadow: 0 8px 32px rgba(31,38,135,0.2) - enough lift without breaking the transparent feel",
+          "Icons: white thin strokes or filled white; colored icons only on solid-colored buttons",
+          "Optional subtle noise/grain (2-4% opacity) to reduce gradient banding through the glass"
+        ],
+        "useCases": [
+          "Media apps: Apple Music, Spotify Now Playing, video players - glass overlays artwork without destroying the image",
+          "Weather / Maps apps: widgets overlaying maps or sky imagery - glass keeps context visible while staying readable",
+          "Hero sections / landing pages: frosted glass cards floating over gradients - premium, modern feel",
+          "Quick-setting panels: control centers, notification centers, toolbar overlays - following Apple visionOS/window systems"
+        ],
+        "combinations": {
+          "good": ["aurora-ui", "class-morphism", "claymorphism", "flat-design", "minimalism"],
+          "caution": ["neumorphism", "maximalism", "collage-art"],
+          "avoid": ["brutalism-ui", "skeuomorphism", "retro"]
+        },
+        "antiPatterns": [
+          "Glass on plain backgrounds: glass panels over white/gray backgrounds lose any visible effect - frosted glass requires a vibrant, detailed background behind it",
+          "Nested glass panels: stacking glass inside glass doubles blur cost and muddies contrast - keep one glass layer per visual region",
+          "Failing contrast: light gray or dark text on glass commonly fails WCAG AA (4.5:1) - always verify text contrast over the busiest background area",
+          "Over-blurring everything: backdrop-filter blur(40px+) across many elements is GPU-expensive and causes jank on mobile - limit blur radius (10-30px) and glass surfaces per screen"
+        ]
+      },
+      "relatedStyles": ["aurora-ui", "class-morphism", "claymorphism"],
+      "tags": ["glass", "frosted", "blur", "transparency", "depth"]
+    }
+  ]
+}
