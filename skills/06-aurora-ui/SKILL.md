@@ -1,3 +1,10 @@
+---
+name: aurora-ui
+description: Living, animated light layers mimicking the aurora borealis - multi-layer gradients, bokeh, shimmer, and glass panels.
+tags: [aurora, gradients, animated, glass, bokeh, light]
+related: [claymorphism, class-morphism, flat-design, glassmorphism]
+---
+
 # UI/UX Skill: Aurora UI
 
 ## 1. Definition

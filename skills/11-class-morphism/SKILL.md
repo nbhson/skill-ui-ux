@@ -1,3 +1,10 @@
+---
+name: class-morphism
+description: Elegant classicism meets morphic depth: golden ratio layouts, warm shadows, glass panels, and refined serif typography.
+tags: [luxury, elegant, serif, gold, warm, glass]
+related: [aurora-ui, neumorphism, glassmorphism]
+---
+
 # UI/UX Skill: Class Morphism
 
 ## 1. Definition

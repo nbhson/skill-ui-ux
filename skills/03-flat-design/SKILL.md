@@ -1,3 +1,10 @@
+---
+name: flat-design
+description: Purely two-dimensional UI with solid colors, simple shapes, and clear boundaries - no 3D effects, born as a reaction to skeuomorphism.
+tags: [flat, 2d, solid-colors, geometric]
+related: [minimalism, neumorphism]
+---
+
 # UI/UX Skill: Flat Design
 
 ## 1. Definition

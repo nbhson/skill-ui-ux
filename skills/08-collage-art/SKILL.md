@@ -1,3 +1,10 @@
+---
+name: collage-art
+description: Layered, mixed-media composite with overlapping images, text, and illustrations at varied scales and blend modes.
+tags: [collage, layers, mixed-media, textures, overlapping]
+related: [maximalism, brutalism-ui]
+---
+
 # UI/UX Skill: Collage Art
 
 ## 1. Definition

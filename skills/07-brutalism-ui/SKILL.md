@@ -1,3 +1,10 @@
+---
+name: brutalism-ui
+description: Raw, unpolished anti-design with system fonts, thick black borders, basic colors, and intentional visual disorder.
+tags: [raw, bold, anti-design, borders, system-fonts]
+related: [maximalism, retro]
+---
+
 # UI/UX Skill: Brutalism UI
 
 ## 1. Definition

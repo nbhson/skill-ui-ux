@@ -1,3 +1,10 @@
+---
+name: maximalism
+description: 'More is more': controlled visual energy built from vibrant colors, patterns, layered imagery, and bold typography.
+tags: [bold, vibrant, patterns, layers, expressive]
+related: [brutalism-ui, collage-art]
+---
+
 # UI/UX Skill: Maximalism
 
 ## 1. Definition

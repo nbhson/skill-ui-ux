@@ -1,3 +1,10 @@
+---
+name: retro
+description: Era-inspired aesthetics from the 1950s through 1990s - distinct palettes, typography, and graphic motifs for each decade.
+tags: [retro, nostalgic, era-specific, synthwave, vintage]
+related: [brutalism-ui, skeuomorphism]
+---
+
 # UI/UX Skill: Retro
 
 ## 1. Definition

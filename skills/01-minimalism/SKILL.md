@@ -1,3 +1,10 @@
+---
+name: minimalism
+description: A 'less is more' philosophy where only essential elements remain and white space is an active design component.
+tags: [minimal, clean, whitespace]
+related: [flat-design, aurora-ui]
+---
+
 # UI/UX Skill: Minimalism
 
 ## 1. Definition

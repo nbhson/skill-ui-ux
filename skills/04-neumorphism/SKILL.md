@@ -1,3 +1,10 @@
+---
+name: neumorphism
+description: Soft, tactile UI where elements appear 'pushed out' or 'pressed in' using symmetrical soft shadows on a unified background.
+tags: [soft, tactile, shadows, subtle-depth]
+related: [claymorphism, class-morphism, flat-design]
+---
+
 # UI/UX Skill: Neumorphism
 
 ## 1. Definition

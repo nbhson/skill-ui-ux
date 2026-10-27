@@ -1,3 +1,10 @@
+---
+name: skeuomorphism
+description: Real-world material mimicry: leather, wood, metal textures with multi-layer shadows and physical button interactions.
+tags: [material, texture, realistic, depth, nostalgic]
+related: [retro]
+---
+
 # UI/UX Skill: Skeuomorphism
 
 ## 1. Definition

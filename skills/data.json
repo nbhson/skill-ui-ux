@@ -21,18 +21,56 @@
           "Concise content: microcopy is succinct, copy is trimmed to the minimum needed for comprehension."
         ],
         "palette": [
-          { "role": "Primary background", "hex": "#FFFFFF", "notes": "Pure white, clean feel" },
-          { "role": "Secondary background", "hex": "#F7F7F7", "notes": "Very light gray for alternating sections" },
-          { "role": "Primary text", "hex": "#111111", "notes": "Near-absolute black, high contrast" },
-          { "role": "Secondary text", "hex": "#6B7280", "notes": "Medium gray for meta and captions" },
-          { "role": "Single accent", "hex": "#2563EB", "notes": "Blue 600 - used for CTA, links, active states" },
-          { "role": "Dark variant background", "hex": "#0A0A0A", "notes": "Dark mode background" },
-          { "role": "Dark variant text", "hex": "#FAFAFA", "notes": "Dark mode text" },
-          { "role": "Dark variant accent", "hex": "#3B82F6", "notes": "Dark mode accent" }
+          {
+            "role": "Primary background",
+            "hex": "#FFFFFF",
+            "notes": "Pure white, clean feel"
+          },
+          {
+            "role": "Secondary background",
+            "hex": "#F7F7F7",
+            "notes": "Very light gray for alternating sections"
+          },
+          {
+            "role": "Primary text",
+            "hex": "#111111",
+            "notes": "Near-absolute black, high contrast"
+          },
+          {
+            "role": "Secondary text",
+            "hex": "#6B7280",
+            "notes": "Medium gray for meta and captions"
+          },
+          {
+            "role": "Single accent",
+            "hex": "#2563EB",
+            "notes": "Blue 600 - used for CTA, links, active states"
+          },
+          {
+            "role": "Dark variant background",
+            "hex": "#0A0A0A",
+            "notes": "Dark mode background"
+          },
+          {
+            "role": "Dark variant text",
+            "hex": "#FAFAFA",
+            "notes": "Dark mode text"
+          },
+          {
+            "role": "Dark variant accent",
+            "hex": "#3B82F6",
+            "notes": "Dark mode accent"
+          }
         ],
         "typography": {
-          "header": { "font": "Inter (or Helvetica Now)", "sizes": "H1: 48-64px / 600-700; H2: 32-40px / 600; Caption: 12-14px / 400, secondary color" },
-          "body": { "font": "Inter (or SF Pro Text)", "sizes": "16-18px / 400, line-height 1.6" }
+          "header": {
+            "font": "Inter (or Helvetica Now)",
+            "sizes": "H1: 48-64px / 600-700; H2: 32-40px / 600; Caption: 12-14px / 400, secondary color"
+          },
+          "body": {
+            "font": "Inter (or SF Pro Text)",
+            "sizes": "16-18px / 400, line-height 1.6"
+          }
         },
         "visualElements": [
           "No heavy borders, no bold shadows; if shadows exist they are extremely subtle (0 1px 2px rgba(0,0,0,.05))",
@@ -47,9 +85,23 @@
           "Premium brands / design studios: portfolio, agency intro pages - minimalism reflects sophistication and expertise"
         ],
         "combinations": {
-          "good": ["aurora-ui", "flat-design", "glassmorphism"],
-          "caution": ["neumorphism", "claymorphism"],
-          "avoid": ["maximalism", "collage-art", "retro", "brutalism-ui"]
+          "good": [
+            "flat-design",
+            "aurora-ui",
+            "glassmorphism"
+          ],
+          "caution": [
+            "neumorphism",
+            "claymorphism",
+            "class-morphism"
+          ],
+          "avoid": [
+            "maximalism",
+            "brutalism-ui",
+            "collage-art",
+            "skeuomorphism",
+            "retro"
+          ]
         },
         "antiPatterns": [
           "Introducing a second focal point or competing visual emphasis on the same screen",
@@ -57,8 +109,15 @@
           "Cramming copy: long paragraphs and verbose microcopy that should be trimmed to the minimum needed for comprehension"
         ]
       },
-      "relatedStyles": ["flat-design", "aurora-ui"],
-      "tags": ["minimal", "clean", "whitespace"]
+      "relatedStyles": [
+        "flat-design",
+        "aurora-ui"
+      ],
+      "tags": [
+        "minimal",
+        "clean",
+        "whitespace"
+      ]
     },
     {
       "id": "maximalism",
@@ -75,16 +134,46 @@
           "Every element serves the story: patterns, stickers, textures are all related to the brand/content - no random decoration."
         ],
         "palette": [
-          { "role": "Dominant color", "hex": "#7C3AED", "notes": "Vivid purple - large backgrounds, titles" },
-          { "role": "Secondary background", "hex": "#FDE047", "notes": "Lemon yellow - large accent blocks" },
-          { "role": "Hot accent", "hex": "#FF3EA5", "notes": "Neon pink - CTAs, badges" },
-          { "role": "Cool accent", "hex": "#22D3EE", "notes": "Cyan - links, hover states" },
-          { "role": "Text contrast", "hex": "#1A1024", "notes": "Deep purple-black - text on light backgrounds" },
-          { "role": "Soft background", "hex": "#FFF1F2", "notes": "Light pink - long content areas" }
+          {
+            "role": "Dominant color",
+            "hex": "#7C3AED",
+            "notes": "Vivid purple - large backgrounds, titles"
+          },
+          {
+            "role": "Secondary background",
+            "hex": "#FDE047",
+            "notes": "Lemon yellow - large accent blocks"
+          },
+          {
+            "role": "Hot accent",
+            "hex": "#FF3EA5",
+            "notes": "Neon pink - CTAs, badges"
+          },
+          {
+            "role": "Cool accent",
+            "hex": "#22D3EE",
+            "notes": "Cyan - links, hover states"
+          },
+          {
+            "role": "Text contrast",
+            "hex": "#1A1024",
+            "notes": "Deep purple-black - text on light backgrounds"
+          },
+          {
+            "role": "Soft background",
+            "hex": "#FFF1F2",
+            "notes": "Light pink - long content areas"
+          }
         ],
         "typography": {
-          "header": { "font": "Clash Display (or Archivo Black, Space Grotesk Bold); Sub-head: Space Grotesk 24-32px / 600", "sizes": "Display: 64-96px / 700, may be uppercase; rotated text (+/-5 degrees), outlined text, or gradient text permitted for headers" },
-          "body": { "font": "Inter; Label/decoration: DM Mono (or Anybody) 12-14px / 500, wide letter-spacing", "sizes": "16-18px / 400-500, line-height 1.5" }
+          "header": {
+            "font": "Clash Display (or Archivo Black, Space Grotesk Bold); Sub-head: Space Grotesk 24-32px / 600",
+            "sizes": "Display: 64-96px / 700, may be uppercase; rotated text (+/-5 degrees), outlined text, or gradient text permitted for headers"
+          },
+          "body": {
+            "font": "Inter; Label/decoration: DM Mono (or Anybody) 12-14px / 500, wide letter-spacing",
+            "sizes": "16-18px / 400-500, line-height 1.5"
+          }
         },
         "visualElements": [
           "Repeating patterns (checkered, zigzag, decorative motifs), stickers, round badge-style stickers",
@@ -99,9 +188,23 @@
           "Creative agencies / marketing campaigns: campaign landing pages needing to make an impression in the first 3 seconds"
         ],
         "combinations": {
-          "good": ["brutalism-ui", "collage-art"],
-          "caution": ["retro", "glassmorphism"],
-          "avoid": ["minimalism", "neumorphism", "class-morphism"]
+          "good": [
+            "brutalism-ui",
+            "collage-art"
+          ],
+          "caution": [
+            "claymorphism",
+            "aurora-ui",
+            "retro",
+            "glassmorphism"
+          ],
+          "avoid": [
+            "minimalism",
+            "flat-design",
+            "neumorphism",
+            "skeuomorphism",
+            "class-morphism"
+          ]
         },
         "antiPatterns": [
           "Chaos without a visual axis: no dominant color or large title to anchor the eye among the density",
@@ -109,8 +212,17 @@
           "Color chaos: more than 3 'hot' colors in the same viewport, or no single dominant color occupying 40-50% of the area"
         ]
       },
-      "relatedStyles": ["brutalism-ui", "collage-art"],
-      "tags": ["bold", "vibrant", "patterns", "layers", "expressive"]
+      "relatedStyles": [
+        "brutalism-ui",
+        "collage-art"
+      ],
+      "tags": [
+        "bold",
+        "vibrant",
+        "patterns",
+        "layers",
+        "expressive"
+      ]
     },
     {
       "id": "flat-design",
@@ -127,17 +239,51 @@
           "Grid-based layout: align to an 8pt or 4pt grid, with consistent spacing throughout."
         ],
         "palette": [
-          { "role": "Primary background", "hex": "#F8FAFC", "notes": "Cool light gray" },
-          { "role": "Block background", "hex": "#3B82F6", "notes": "Blue - most common in flat design" },
-          { "role": "Accent 1", "hex": "#10B981", "notes": "Green - success, secondary CTA" },
-          { "role": "Accent 2", "hex": "#F59E0B", "notes": "Amber - warning" },
-          { "role": "Danger", "hex": "#EF4444", "notes": "Red - error" },
-          { "role": "Primary text", "hex": "#1E293B", "notes": "Dark gray, avoid absolute black" },
-          { "role": "Secondary text", "hex": "#64748B", "notes": "Medium gray" }
+          {
+            "role": "Primary background",
+            "hex": "#F8FAFC",
+            "notes": "Cool light gray"
+          },
+          {
+            "role": "Block background",
+            "hex": "#3B82F6",
+            "notes": "Blue - most common in flat design"
+          },
+          {
+            "role": "Accent 1",
+            "hex": "#10B981",
+            "notes": "Green - success, secondary CTA"
+          },
+          {
+            "role": "Accent 2",
+            "hex": "#F59E0B",
+            "notes": "Amber - warning"
+          },
+          {
+            "role": "Danger",
+            "hex": "#EF4444",
+            "notes": "Red - error"
+          },
+          {
+            "role": "Primary text",
+            "hex": "#1E293B",
+            "notes": "Dark gray, avoid absolute black"
+          },
+          {
+            "role": "Secondary text",
+            "hex": "#64748B",
+            "notes": "Medium gray"
+          }
         ],
         "typography": {
-          "header": { "font": "Nunito Sans (or Open Sans, Source Sans Pro)", "sizes": "H1: 32-48px / 700; H2: 24-32px / 600" },
-          "body": { "font": "Open Sans (or Roboto); UI Label: Open Sans / Nunito Sans 13-14px / 600, uppercase for status labels", "sizes": "15-17px / 400, line-height 1.5" }
+          "header": {
+            "font": "Nunito Sans (or Open Sans, Source Sans Pro)",
+            "sizes": "H1: 32-48px / 700; H2: 24-32px / 600"
+          },
+          "body": {
+            "font": "Open Sans (or Roboto); UI Label: Open Sans / Nunito Sans 13-14px / 600, uppercase for status labels",
+            "sizes": "15-17px / 400, line-height 1.5"
+          }
         },
         "visualElements": [
           "Flat buttons: solid background, thin or no border, uniform border-radius",
@@ -151,9 +297,23 @@
           "Corporate websites: landing pages, product introductions - delivers messages directly and professionally"
         ],
         "combinations": {
-          "good": ["neumorphism", "aurora-ui", "glassmorphism"],
-          "caution": ["skeuomorphism"],
-          "avoid": ["maximalism", "collage-art"]
+          "good": [
+            "minimalism",
+            "aurora-ui",
+            "glassmorphism"
+          ],
+          "caution": [
+            "neumorphism",
+            "claymorphism",
+            "skeuomorphism",
+            "retro",
+            "class-morphism"
+          ],
+          "avoid": [
+            "maximalism",
+            "brutalism-ui",
+            "collage-art"
+          ]
         },
         "antiPatterns": [
           "Reintroducing depth: heavy gradients, 3D shadows, bevels, or textures that break the 2D essence",
@@ -161,8 +321,16 @@
           "Gradient-filled or multicolor icons that break the solid single-color glyph rule"
         ]
       },
-      "relatedStyles": ["minimalism", "neumorphism"],
-      "tags": ["flat", "2d", "solid-colors", "geometric"]
+      "relatedStyles": [
+        "minimalism",
+        "neumorphism"
+      ],
+      "tags": [
+        "flat",
+        "2d",
+        "solid-colors",
+        "geometric"
+      ]
     },
     {
       "id": "neumorphism",
@@ -179,17 +347,51 @@
           "Consistent border-radius: rounded corners of 16-24px uniformly across elements, creating a soft, tactile feel."
         ],
         "palette": [
-          { "role": "Primary background (light)", "hex": "#E4E9F2", "notes": "Warm gray-white - most common background" },
-          { "role": "Primary background (dark)", "hex": "#2D3748", "notes": "Dark gray - for dark mode" },
-          { "role": "Element (light)", "hex": "#ECF0F3", "notes": "5-8% lighter than background" },
-          { "role": "Light shadow", "hex": "#FFFFFF (70% opacity)", "notes": "Top-left corner" },
-          { "role": "Dark shadow", "hex": "#A3B1C6 (50% opacity)", "notes": "Bottom-right corner" },
-          { "role": "Accent color", "hex": "#6C63FF", "notes": "Soft purple - used for icons/active states only" },
-          { "role": "Primary text", "hex": "#4A5568", "notes": "Medium-dark gray, not too dark" }
+          {
+            "role": "Primary background (light)",
+            "hex": "#E4E9F2",
+            "notes": "Warm gray-white - most common background"
+          },
+          {
+            "role": "Primary background (dark)",
+            "hex": "#2D3748",
+            "notes": "Dark gray - for dark mode"
+          },
+          {
+            "role": "Element (light)",
+            "hex": "#ECF0F3",
+            "notes": "5-8% lighter than background"
+          },
+          {
+            "role": "Light shadow",
+            "hex": "#FFFFFF (70% opacity)",
+            "notes": "Top-left corner"
+          },
+          {
+            "role": "Dark shadow",
+            "hex": "#A3B1C6 (50% opacity)",
+            "notes": "Bottom-right corner"
+          },
+          {
+            "role": "Accent color",
+            "hex": "#6C63FF",
+            "notes": "Soft purple - used for icons/active states only"
+          },
+          {
+            "role": "Primary text",
+            "hex": "#4A5568",
+            "notes": "Medium-dark gray, not too dark"
+          }
         ],
         "typography": {
-          "header": { "font": "Poppins (or Nunito, Quicksand)", "sizes": "H1: 36-48px / 500-600; H2: 24-28px / 500" },
-          "body": { "font": "Poppins; UI Label: Poppins 13-14px / 500", "sizes": "15-16px / 400, line-height 1.6" }
+          "header": {
+            "font": "Poppins (or Nunito, Quicksand)",
+            "sizes": "H1: 36-48px / 500-600; H2: 24-28px / 500"
+          },
+          "body": {
+            "font": "Poppins; UI Label: Poppins 13-14px / 500",
+            "sizes": "15-16px / 400, line-height 1.6"
+          }
         },
         "visualElements": [
           "Soft UI: shadow blur 20-40px, spread 5-15px, no hard edges",
@@ -204,9 +406,23 @@
           "Lightweight portfolios: personal pages, profile apps - creates a refined feel, distinct from flat design"
         ],
         "combinations": {
-          "good": ["flat-design", "class-morphism"],
-          "caution": ["aurora-ui", "glassmorphism"],
-          "avoid": ["brutalism-ui", "skeuomorphism", "maximalism"]
+          "good": [
+            "class-morphism"
+          ],
+          "caution": [
+            "minimalism",
+            "flat-design",
+            "aurora-ui",
+            "glassmorphism"
+          ],
+          "avoid": [
+            "maximalism",
+            "claymorphism",
+            "brutalism-ui",
+            "collage-art",
+            "skeuomorphism",
+            "retro"
+          ]
         },
         "antiPatterns": [
           "Mixing neumorphic elements with high-contrast flat elements in the same component zone",
@@ -214,8 +430,17 @@
           "Data-heavy dashboards: neumorphism is unsuitable for data-dense interfaces because subtle shadows don't provide enough layer differentiation"
         ]
       },
-      "relatedStyles": ["claymorphism", "class-morphism", "flat-design"],
-      "tags": ["soft", "tactile", "shadows", "subtle-depth"]
+      "relatedStyles": [
+        "claymorphism",
+        "class-morphism",
+        "flat-design"
+      ],
+      "tags": [
+        "soft",
+        "tactile",
+        "shadows",
+        "subtle-depth"
+      ]
     },
     {
       "id": "claymorphism",
@@ -232,17 +457,51 @@
           "Thin borders: often a 1px transparent or subtle border creating a 'curved edge' look-through effect, especially when blocks overlap."
         ],
         "palette": [
-          { "role": "Primary background", "hex": "#E8EEF5", "notes": "Light blue-gray - common Apple-ish background" },
-          { "role": "Clay block 1", "hex": "#7C3AED -> #8B5CF6", "notes": "Purple gradient, 32px border-radius" },
-          { "role": "Clay block 2", "hex": "#F472B6 -> #FB7185", "notes": "Pink-coral gradient" },
-          { "role": "Clay block 3", "hex": "#34D399 -> #6EE7B7", "notes": "Mint green gradient" },
-          { "role": "Highlight", "hex": "#FFFFFF (40-60% opacity)", "notes": "Light zone at the top" },
-          { "role": "Near shadow", "hex": "#000000 (10% opacity)", "notes": "Small, sharp shadow" },
-          { "role": "Far shadow", "hex": "#6366F1 (15% opacity)", "notes": "Large, blurred shadow, subtle purple tint" }
+          {
+            "role": "Primary background",
+            "hex": "#E8EEF5",
+            "notes": "Light blue-gray - common Apple-ish background"
+          },
+          {
+            "role": "Clay block 1",
+            "hex": "#7C3AED -> #8B5CF6",
+            "notes": "Purple gradient, 32px border-radius"
+          },
+          {
+            "role": "Clay block 2",
+            "hex": "#F472B6 -> #FB7185",
+            "notes": "Pink-coral gradient"
+          },
+          {
+            "role": "Clay block 3",
+            "hex": "#34D399 -> #6EE7B7",
+            "notes": "Mint green gradient"
+          },
+          {
+            "role": "Highlight",
+            "hex": "#FFFFFF (40-60% opacity)",
+            "notes": "Light zone at the top"
+          },
+          {
+            "role": "Near shadow",
+            "hex": "#000000 (10% opacity)",
+            "notes": "Small, sharp shadow"
+          },
+          {
+            "role": "Far shadow",
+            "hex": "#6366F1 (15% opacity)",
+            "notes": "Large, blurred shadow, subtle purple tint"
+          }
         ],
         "typography": {
-          "header": { "font": "SF Pro Rounded (or Nunito, Poppins)", "sizes": "H1: 36-48px / 600-700" },
-          "body": { "font": "SF Pro Rounded; Label: SF Pro Rounded 12-14px / 500", "sizes": "15-17px / 400, line-height 1.5" }
+          "header": {
+            "font": "SF Pro Rounded (or Nunito, Poppins)",
+            "sizes": "H1: 36-48px / 600-700"
+          },
+          "body": {
+            "font": "SF Pro Rounded; Label: SF Pro Rounded 12-14px / 500",
+            "sizes": "15-17px / 400, line-height 1.5"
+          }
         },
         "visualElements": [
           "Icons: filled style, large rounded corners, often placed inside fully circular clay containers",
@@ -257,9 +516,23 @@
           "Lightweight dashboards: small widgets on smart dashboards, not for large data tables"
         ],
         "combinations": {
-          "good": ["aurora-ui", "glassmorphism"],
-          "caution": ["flat-design"],
-          "avoid": ["neumorphism", "brutalism-ui"]
+          "good": [
+            "glassmorphism"
+          ],
+          "caution": [
+            "minimalism",
+            "maximalism",
+            "flat-design",
+            "aurora-ui",
+            "class-morphism"
+          ],
+          "avoid": [
+            "neumorphism",
+            "brutalism-ui",
+            "collage-art",
+            "skeuomorphism",
+            "retro"
+          ]
         },
         "antiPatterns": [
           "Forgetting the internal gradient: a clay block without a top-to-bottom gradient is just a rounded neumorphic card",
@@ -267,8 +540,18 @@
           "Mixing neumorphism and claymorphism in the same viewport without clear zone separation"
         ]
       },
-      "relatedStyles": ["neumorphism", "aurora-ui", "glassmorphism"],
-      "tags": ["3d", "rounded", "clay", "floating", "apple-style"]
+      "relatedStyles": [
+        "neumorphism",
+        "aurora-ui",
+        "glassmorphism"
+      ],
+      "tags": [
+        "3d",
+        "rounded",
+        "clay",
+        "floating",
+        "apple-style"
+      ]
     },
     {
       "id": "aurora-ui",
@@ -285,17 +568,51 @@
           "Backdrop blur for content: when placing content over aurora, use backdrop-filter: blur() or glass panels."
         ],
         "palette": [
-          { "role": "Background layer 1", "hex": "#0F0C29", "notes": "Deep purple-black - creates depth" },
-          { "role": "Background layer 2", "hex": "#302B63", "notes": "Dark purple" },
-          { "role": "Light layer 1", "hex": "#6366F1", "notes": "Indigo - central light area" },
-          { "role": "Light layer 2", "hex": "#06B6D4", "notes": "Cyan - cool light area" },
-          { "role": "Light layer 3", "hex": "#A855F7", "notes": "Purple-pink - warm alternating area" },
-          { "role": "Accent", "hex": "#22D3EE", "notes": "Bright cyan - icons, highlights" },
-          { "role": "Text", "hex": "#FFFFFF (90% opacity)", "notes": "Soft white, light shadow" }
+          {
+            "role": "Background layer 1",
+            "hex": "#0F0C29",
+            "notes": "Deep purple-black - creates depth"
+          },
+          {
+            "role": "Background layer 2",
+            "hex": "#302B63",
+            "notes": "Dark purple"
+          },
+          {
+            "role": "Light layer 1",
+            "hex": "#6366F1",
+            "notes": "Indigo - central light area"
+          },
+          {
+            "role": "Light layer 2",
+            "hex": "#06B6D4",
+            "notes": "Cyan - cool light area"
+          },
+          {
+            "role": "Light layer 3",
+            "hex": "#A855F7",
+            "notes": "Purple-pink - warm alternating area"
+          },
+          {
+            "role": "Accent",
+            "hex": "#22D3EE",
+            "notes": "Bright cyan - icons, highlights"
+          },
+          {
+            "role": "Text",
+            "hex": "#FFFFFF (90% opacity)",
+            "notes": "Soft white, light shadow"
+          }
         ],
         "typography": {
-          "header": { "font": "SF Pro Display (or Geist, Inter)", "sizes": "Display: 48-72px / 600-700, soft text-shadow; Header: 28-36px / 600" },
-          "body": { "font": "SF Pro Text (or Inter); Label: SF Pro Text 12-14px / 500, letter-spacing 0.05em", "sizes": "15-17px / 400-500, 85-90% opacity" }
+          "header": {
+            "font": "SF Pro Display (or Geist, Inter)",
+            "sizes": "Display: 48-72px / 600-700, soft text-shadow; Header: 28-36px / 600"
+          },
+          "body": {
+            "font": "SF Pro Text (or Inter); Label: SF Pro Text 12-14px / 500, letter-spacing 0.05em",
+            "sizes": "15-17px / 400-500, 85-90% opacity"
+          }
         },
         "visualElements": [
           "Animated background: slow-moving gradients, infinite loop",
@@ -310,9 +627,23 @@
           "Premium Web3/AI/Fintech brands: landing pages for high-end tech products wanting to convey innovation and the future"
         ],
         "combinations": {
-          "good": ["class-morphism", "flat-design", "glassmorphism"],
-          "caution": ["neumorphism"],
-          "avoid": ["brutalism-ui", "skeuomorphism", "retro"]
+          "good": [
+            "minimalism",
+            "flat-design",
+            "class-morphism",
+            "glassmorphism"
+          ],
+          "caution": [
+            "maximalism",
+            "neumorphism",
+            "claymorphism",
+            "collage-art"
+          ],
+          "avoid": [
+            "brutalism-ui",
+            "skeuomorphism",
+            "retro"
+          ]
         },
         "antiPatterns": [
           "Placing detailed photographs or live video directly over aurora without an intermediate glass overlay",
@@ -320,8 +651,20 @@
           "Over-animating: gradients that move too fast or are too attention-grabbing (cycle should be 8-20s minimum)"
         ]
       },
-      "relatedStyles": ["claymorphism", "class-morphism", "flat-design", "glassmorphism"],
-      "tags": ["aurora", "gradients", "animated", "glass", "bokeh", "light"]
+      "relatedStyles": [
+        "claymorphism",
+        "class-morphism",
+        "flat-design",
+        "glassmorphism"
+      ],
+      "tags": [
+        "aurora",
+        "gradients",
+        "animated",
+        "glass",
+        "bokeh",
+        "light"
+      ]
     },
     {
       "id": "brutalism-ui",
@@ -339,16 +682,46 @@
           "'Raw' navigation: can be text link lists, DOS-style buttons, or the simplest possible menu."
         ],
         "palette": [
-          { "role": "Primary background", "hex": "#FFFEF0", "notes": "Off-white - 'paper' feel" },
-          { "role": "Accent 1", "hex": "#FFE600", "notes": "Bright yellow - large block backgrounds" },
-          { "role": "Accent 2", "hex": "#FF5C00", "notes": "Orange-red - CTAs" },
-          { "role": "Accent 3", "hex": "#FF00FF", "notes": "Bright magenta - hover states" },
-          { "role": "Text", "hex": "#000000", "notes": "Absolute black" },
-          { "role": "Accent", "hex": "#00FF00", "notes": "Terminal green - for highlights" }
+          {
+            "role": "Primary background",
+            "hex": "#FFFEF0",
+            "notes": "Off-white - 'paper' feel"
+          },
+          {
+            "role": "Accent 1",
+            "hex": "#FFE600",
+            "notes": "Bright yellow - large block backgrounds"
+          },
+          {
+            "role": "Accent 2",
+            "hex": "#FF5C00",
+            "notes": "Orange-red - CTAs"
+          },
+          {
+            "role": "Accent 3",
+            "hex": "#FF00FF",
+            "notes": "Bright magenta - hover states"
+          },
+          {
+            "role": "Text",
+            "hex": "#000000",
+            "notes": "Absolute black"
+          },
+          {
+            "role": "Accent",
+            "hex": "#00FF00",
+            "notes": "Terminal green - for highlights"
+          }
         ],
         "typography": {
-          "header": { "font": "Archivo Black (or Impact, Arial Black)", "sizes": "Display: 48-120px / 900, uppercase" },
-          "body": { "font": "Courier New (or Space Mono, Roboto Mono); UI Label: Arial (or Helvetica) 14-16px / 700", "sizes": "16-18px / 400-700. Monospace fonts are the most popular choice in brutalism UI." }
+          "header": {
+            "font": "Archivo Black (or Impact, Arial Black)",
+            "sizes": "Display: 48-120px / 900, uppercase"
+          },
+          "body": {
+            "font": "Courier New (or Space Mono, Roboto Mono); UI Label: Arial (or Helvetica) 14-16px / 700",
+            "sizes": "16-18px / 400-700. Monospace fonts are the most popular choice in brutalism UI."
+          }
         },
         "visualElements": [
           "2-4px black borders around almost everything",
@@ -364,9 +737,22 @@
           "Rebellious brands / digital art: streetwear brands, digital artists, NFTs - expressing strong personality"
         ],
         "combinations": {
-          "good": ["maximalism", "retro"],
+          "good": [
+            "maximalism",
+            "collage-art",
+            "retro"
+          ],
           "caution": [],
-          "avoid": ["neumorphism", "claymorphism", "aurora-ui", "class-morphism", "glassmorphism"]
+          "avoid": [
+            "minimalism",
+            "flat-design",
+            "neumorphism",
+            "claymorphism",
+            "aurora-ui",
+            "skeuomorphism",
+            "class-morphism",
+            "glassmorphism"
+          ]
         },
         "antiPatterns": [
           "Soft shadows or rounded corners: anything that smooths or prettifies the 'raw' aesthetic",
@@ -374,8 +760,17 @@
           "Combining with Neumorphism, Claymorphism, or Aurora UI: diametrically opposite in every element, producing an 'indecisive mix'"
         ]
       },
-      "relatedStyles": ["maximalism", "retro"],
-      "tags": ["raw", "bold", "anti-design", "borders", "system-fonts"]
+      "relatedStyles": [
+        "maximalism",
+        "retro"
+      ],
+      "tags": [
+        "raw",
+        "bold",
+        "anti-design",
+        "borders",
+        "system-fonts"
+      ]
     },
     {
       "id": "collage-art",
@@ -392,16 +787,46 @@
           "Content remains readable: despite busyness, main text and CTAs must stand out and be easy to read - use solid backgrounds behind text if needed."
         ],
         "palette": [
-          { "role": "Textured background", "hex": "#F5F0E8", "notes": "Cream - aged paper" },
-          { "role": "Layer 1", "hex": "#C026D3", "notes": "Magenta - vivid color layer" },
-          { "role": "Layer 2", "hex": "#F59E0B", "notes": "Orange - warm layer" },
-          { "role": "Layer 3", "hex": "#06B6D4", "notes": "Cyan - cool layer" },
-          { "role": "Text overlay", "hex": "#FFFFFF", "notes": "White on dark colors" },
-          { "role": "Text on solid", "hex": "#1E293B", "notes": "Dark blue-gray - text with solid background" }
+          {
+            "role": "Textured background",
+            "hex": "#F5F0E8",
+            "notes": "Cream - aged paper"
+          },
+          {
+            "role": "Layer 1",
+            "hex": "#C026D3",
+            "notes": "Magenta - vivid color layer"
+          },
+          {
+            "role": "Layer 2",
+            "hex": "#F59E0B",
+            "notes": "Orange - warm layer"
+          },
+          {
+            "role": "Layer 3",
+            "hex": "#06B6D4",
+            "notes": "Cyan - cool layer"
+          },
+          {
+            "role": "Text overlay",
+            "hex": "#FFFFFF",
+            "notes": "White on dark colors"
+          },
+          {
+            "role": "Text on solid",
+            "hex": "#1E293B",
+            "notes": "Dark blue-gray - text with solid background"
+          }
         ],
         "typography": {
-          "header": { "font": "Playfair Display (classic serif); Accent text: Staatliches (or Bebas Neue) 24-48px / 400, wide letter-spacing", "sizes": "Display: 48-80px / 700, may be italic; Sub-head: Space Grotesk 20-28px / 500" },
-          "body": { "font": "DM Sans (or Libre Baskerville)", "sizes": "14-16px / 400. Combine serif + sans-serif + display - not limited to 1 family." }
+          "header": {
+            "font": "Playfair Display (classic serif); Accent text: Staatliches (or Bebas Neue) 24-48px / 400, wide letter-spacing",
+            "sizes": "Display: 48-80px / 700, may be italic; Sub-head: Space Grotesk 20-28px / 500"
+          },
+          "body": {
+            "font": "DM Sans (or Libre Baskerville)",
+            "sizes": "14-16px / 400. Combine serif + sans-serif + display - not limited to 1 family."
+          }
         },
         "visualElements": [
           "Non-standard-ratio cropped images",
@@ -416,9 +841,23 @@
           "Campaign/Event landing pages: event pages, advertising campaigns - attracting attention with rich imagery"
         ],
         "combinations": {
-          "good": ["brutalism-ui", "maximalism"],
-          "caution": ["retro", "glassmorphism"],
-          "avoid": ["neumorphism", "minimalism", "class-morphism"]
+          "good": [
+            "maximalism",
+            "brutalism-ui"
+          ],
+          "caution": [
+            "aurora-ui",
+            "retro",
+            "glassmorphism"
+          ],
+          "avoid": [
+            "minimalism",
+            "flat-design",
+            "neumorphism",
+            "claymorphism",
+            "skeuomorphism",
+            "class-morphism"
+          ]
         },
         "antiPatterns": [
           "Layers with competing opacities that make content and hierarchy unreadable",
@@ -426,10 +865,19 @@
           "Combining with Neumorphism or Minimalism: collage requires visual richness while minimalism/neumorphism require simplicity - fundamentally incompatible"
         ]
       },
-      "relatedStyles": ["maximalism", "brutalism-ui"],
-      "tags": ["collage", "layers", "mixed-media", "textures", "overlapping"]
+      "relatedStyles": [
+        "maximalism",
+        "brutalism-ui"
+      ],
+      "tags": [
+        "collage",
+        "layers",
+        "mixed-media",
+        "textures",
+        "overlapping"
+      ]
     },
-{
+    {
       "id": "skeuomorphism",
       "name": "Skeuomorphism",
       "summary": "Real-world material mimicry: leather, wood, metal textures with multi-layer shadows and physical button interactions.",
@@ -444,17 +892,51 @@
           "Physical interaction feedback: when pressed, buttons sink; volume sliders have grooves; switches have obvious on/off states."
         ],
         "palette": [
-          { "role": "Brown leather background", "hex": "#8B5A2B", "notes": "Leather brown" },
-          { "role": "Black leather", "hex": "#3D3D3D", "notes": "Black leather (iPod classic)" },
-          { "role": "Light wood", "hex": "#C4A574", "notes": "Light wood yellow" },
-          { "role": "Silver metal", "hex": "#C0C0C0 -> #E8E8E8", "notes": "Metal gradient" },
-          { "role": "Gold metal", "hex": "#D4AF37 -> #FFD700", "notes": "Brass/gold" },
-          { "role": "Highlight", "hex": "#FFFFFF (30% opacity)", "notes": "Light on the surface" },
-          { "role": "Dark shadow", "hex": "#000000 (30-50% opacity)", "notes": "Drop shadow" }
+          {
+            "role": "Brown leather background",
+            "hex": "#8B5A2B",
+            "notes": "Leather brown"
+          },
+          {
+            "role": "Black leather",
+            "hex": "#3D3D3D",
+            "notes": "Black leather (iPod classic)"
+          },
+          {
+            "role": "Light wood",
+            "hex": "#C4A574",
+            "notes": "Light wood yellow"
+          },
+          {
+            "role": "Silver metal",
+            "hex": "#C0C0C0 -> #E8E8E8",
+            "notes": "Metal gradient"
+          },
+          {
+            "role": "Gold metal",
+            "hex": "#D4AF37 -> #FFD700",
+            "notes": "Brass/gold"
+          },
+          {
+            "role": "Highlight",
+            "hex": "#FFFFFF (30% opacity)",
+            "notes": "Light on the surface"
+          },
+          {
+            "role": "Dark shadow",
+            "hex": "#000000 (30-50% opacity)",
+            "notes": "Drop shadow"
+          }
         ],
         "typography": {
-          "header": { "font": "Georgia (or Palatino, Rockwell)", "sizes": "H1: 32-48px / 700, bold serif" },
-          "body": { "font": "Trebuchet MS (or Verdana); Digital display: Digital-7 Mono (or LCD mono) 24-48px", "sizes": "15-17px / 400, readable. Serif fonts (Georgia, Palatino) or 'soft' sans-serif (Trebuchet) fit the realistic material feel." }
+          "header": {
+            "font": "Georgia (or Palatino, Rockwell)",
+            "sizes": "H1: 32-48px / 700, bold serif"
+          },
+          "body": {
+            "font": "Trebuchet MS (or Verdana); Digital display: Digital-7 Mono (or LCD mono) 24-48px",
+            "sizes": "15-17px / 400, readable. Serif fonts (Georgia, Palatino) or 'soft' sans-serif (Trebuchet) fit the realistic material feel."
+          }
         },
         "visualElements": [
           "Background textures: leather, linen, wood, metal - used as background for the entire interface or for specific panels",
@@ -469,9 +951,23 @@
           "Nostalgic/retro products: notebook-style note apps, virtual garden apps - creates emotional connection"
         ],
         "combinations": {
-          "good": ["retro"],
-          "caution": ["flat-design"],
-          "avoid": ["neumorphism", "claymorphism", "aurora-ui", "class-morphism", "glassmorphism"]
+          "good": [
+            "retro"
+          ],
+          "caution": [
+            "flat-design",
+            "class-morphism"
+          ],
+          "avoid": [
+            "minimalism",
+            "maximalism",
+            "neumorphism",
+            "claymorphism",
+            "aurora-ui",
+            "brutalism-ui",
+            "collage-art",
+            "glassmorphism"
+          ]
         },
         "antiPatterns": [
           "Mixing multiple material textures (leather + wood + metal) on a single screen without a clear dominant material",
@@ -479,8 +975,16 @@
           "Over-skeuomorphic UI in modern contexts: today's users expect cleaner, faster-loading interfaces - use selectively"
         ]
       },
-      "relatedStyles": ["retro"],
-      "tags": ["material", "texture", "realistic", "depth", "nostalgic"]
+      "relatedStyles": [
+        "retro"
+      ],
+      "tags": [
+        "material",
+        "texture",
+        "realistic",
+        "depth",
+        "nostalgic"
+      ]
     },
     {
       "id": "retro",
@@ -496,25 +1000,91 @@
           "Analog textures: film grain, scan lines, dithering - evoking analog media."
         ],
         "palette": [
-          { "role": "Synthwave dark background", "hex": "#0D0221", "notes": "80s synthwave dark background" },
-          { "role": "Synthwave neon purple", "hex": "#FF00FF", "notes": "80s neon purple" },
-          { "role": "Synthwave neon pink", "hex": "#FF6EC7", "notes": "80s neon pink" },
-          { "role": "Synthwave neon cyan", "hex": "#00FFFF", "notes": "80s neon cyan" },
-          { "role": "Synthwave hot yellow", "hex": "#FFE900", "notes": "80s neon yellow" },
-          { "role": "Y2K white background", "hex": "#F0F0F0", "notes": "90s Y2K light background" },
-          { "role": "Y2K teal", "hex": "#008080", "notes": "90s Windows teal" },
-          { "role": "Y2K deep purple", "hex": "#663399", "notes": "90s deep purple" },
-          { "role": "Y2K silver desktop", "hex": "#C0C0C0", "notes": "90s silver desktop" },
-          { "role": "Y2K navy", "hex": "#000080", "notes": "90s classic navy" },
-          { "role": "50s cherry red", "hex": "#FF2D2D", "notes": "Diner style cherry red" },
-          { "role": "50s mint green", "hex": "#98FF98", "notes": "Diner style mint" },
-          { "role": "50s cream yellow", "hex": "#F7E7CE", "notes": "Diner style cream" },
-          { "role": "50s bubblegum pink", "hex": "#FFB6C1", "notes": "Diner style pink" },
-          { "role": "50s milk white", "hex": "#FFFDD0", "notes": "Diner style milk white" }
+          {
+            "role": "Synthwave dark background",
+            "hex": "#0D0221",
+            "notes": "80s synthwave dark background"
+          },
+          {
+            "role": "Synthwave neon purple",
+            "hex": "#FF00FF",
+            "notes": "80s neon purple"
+          },
+          {
+            "role": "Synthwave neon pink",
+            "hex": "#FF6EC7",
+            "notes": "80s neon pink"
+          },
+          {
+            "role": "Synthwave neon cyan",
+            "hex": "#00FFFF",
+            "notes": "80s neon cyan"
+          },
+          {
+            "role": "Synthwave hot yellow",
+            "hex": "#FFE900",
+            "notes": "80s neon yellow"
+          },
+          {
+            "role": "Y2K white background",
+            "hex": "#F0F0F0",
+            "notes": "90s Y2K light background"
+          },
+          {
+            "role": "Y2K teal",
+            "hex": "#008080",
+            "notes": "90s Windows teal"
+          },
+          {
+            "role": "Y2K deep purple",
+            "hex": "#663399",
+            "notes": "90s deep purple"
+          },
+          {
+            "role": "Y2K silver desktop",
+            "hex": "#C0C0C0",
+            "notes": "90s silver desktop"
+          },
+          {
+            "role": "Y2K navy",
+            "hex": "#000080",
+            "notes": "90s classic navy"
+          },
+          {
+            "role": "50s cherry red",
+            "hex": "#FF2D2D",
+            "notes": "Diner style cherry red"
+          },
+          {
+            "role": "50s mint green",
+            "hex": "#98FF98",
+            "notes": "Diner style mint"
+          },
+          {
+            "role": "50s cream yellow",
+            "hex": "#F7E7CE",
+            "notes": "Diner style cream"
+          },
+          {
+            "role": "50s bubblegum pink",
+            "hex": "#FFB6C1",
+            "notes": "Diner style pink"
+          },
+          {
+            "role": "50s milk white",
+            "hex": "#FFFDD0",
+            "notes": "Diner style milk white"
+          }
         ],
         "typography": {
-          "header": { "font": "1950s: Lobster / Pacifico; 1970s: Righteous / Satisfy; 1980s: Press Start 2P / Orbitron; 1990s: Eurostile / Arial Black", "sizes": "8-bit/pixel fonts (Press Start 2P) for display + screen fonts (VT323) for body is the most common 80s pairing" },
-          "body": { "font": "1950s: Open Sans / Lato; 1970s: Roboto Slab / Merriweather; 1980s: VT323 / Share Tech Mono; 1990s: Verdana / Trebuchet MS", "sizes": "Body size varies by era; pixel fonts 8-16px / monospace 14-18px / readable serifs 15-17px" }
+          "header": {
+            "font": "1950s: Lobster / Pacifico; 1970s: Righteous / Satisfy; 1980s: Press Start 2P / Orbitron; 1990s: Eurostile / Arial Black",
+            "sizes": "8-bit/pixel fonts (Press Start 2P) for display + screen fonts (VT323) for body is the most common 80s pairing"
+          },
+          "body": {
+            "font": "1950s: Open Sans / Lato; 1970s: Roboto Slab / Merriweather; 1980s: VT323 / Share Tech Mono; 1990s: Verdana / Trebuchet MS",
+            "sizes": "Body size varies by era; pixel fonts 8-16px / monospace 14-18px / readable serifs 15-17px"
+          }
         },
         "visualElements": [
           "Scanline: thin horizontal lines overlaid on images, creating a CRT monitor effect",
@@ -530,9 +1100,23 @@
           "Nostalgia campaigns: brands wanting to connect with memories, 'golden era' nostalgia"
         ],
         "combinations": {
-          "good": ["brutalism-ui", "skeuomorphism"],
-          "caution": ["maximalism", "collage-art"],
-          "avoid": ["minimalism", "neumorphism", "glassmorphism"]
+          "good": [
+            "brutalism-ui",
+            "skeuomorphism"
+          ],
+          "caution": [
+            "maximalism",
+            "flat-design",
+            "collage-art",
+            "class-morphism"
+          ],
+          "avoid": [
+            "minimalism",
+            "neumorphism",
+            "claymorphism",
+            "aurora-ui",
+            "glassmorphism"
+          ]
         },
         "antiPatterns": [
           "Mixing multiple decades (50s + 80s + 90s) in a single viewport without intentional collage framing",
@@ -540,8 +1124,17 @@
           "Retro requires visual richness: applying retro palette and motifs to a sparse, empty layout loses the era's spirit"
         ]
       },
-      "relatedStyles": ["brutalism-ui", "skeuomorphism"],
-      "tags": ["retro", "nostalgic", "era-specific", "synthwave", "vintage"]
+      "relatedStyles": [
+        "brutalism-ui",
+        "skeuomorphism"
+      ],
+      "tags": [
+        "retro",
+        "nostalgic",
+        "era-specific",
+        "synthwave",
+        "vintage"
+      ]
     },
     {
       "id": "class-morphism",
@@ -558,18 +1151,56 @@
           "Subtle texture: may use subtle texture (silk, faint stone grain) for backgrounds, not too obvious."
         ],
         "palette": [
-          { "role": "Primary background", "hex": "#F5F0EB", "notes": "Warm off-white - creates quality paper feel" },
-          { "role": "Glass background", "hex": "#FFFFFF (30-50% opacity)", "notes": "Transparent panel over background" },
-          { "role": "Dominant color", "hex": "#1C3A5F", "notes": "Deep navy - composed, luxurious" },
-          { "role": "Accent", "hex": "#C9A96E", "notes": "Champagne gold - gentle highlight" },
-          { "role": "Soft accent", "hex": "#BFA89E", "notes": "Dusty rose - naturally warm color" },
-          { "role": "Shadow", "hex": "#8B7355 (12% opacity)", "notes": "Warm shadow, not cold gray" },
-          { "role": "Primary text", "hex": "#1A1A1A", "notes": "Soft black" },
-          { "role": "Secondary text", "hex": "#6B5B4F", "notes": "Warm gray-brown" }
+          {
+            "role": "Primary background",
+            "hex": "#F5F0EB",
+            "notes": "Warm off-white - creates quality paper feel"
+          },
+          {
+            "role": "Glass background",
+            "hex": "#FFFFFF (30-50% opacity)",
+            "notes": "Transparent panel over background"
+          },
+          {
+            "role": "Dominant color",
+            "hex": "#1C3A5F",
+            "notes": "Deep navy - composed, luxurious"
+          },
+          {
+            "role": "Accent",
+            "hex": "#C9A96E",
+            "notes": "Champagne gold - gentle highlight"
+          },
+          {
+            "role": "Soft accent",
+            "hex": "#BFA89E",
+            "notes": "Dusty rose - naturally warm color"
+          },
+          {
+            "role": "Shadow",
+            "hex": "#8B7355 (12% opacity)",
+            "notes": "Warm shadow, not cold gray"
+          },
+          {
+            "role": "Primary text",
+            "hex": "#1A1A1A",
+            "notes": "Soft black"
+          },
+          {
+            "role": "Secondary text",
+            "hex": "#6B5B4F",
+            "notes": "Warm gray-brown"
+          }
         ],
         "typography": {
-          "header": { "font": "Playfair Display (or Cormorant Garamond)", "sizes": "Display: H1 40-56px / 500-600, italic variant; Header: H2 28-36px / 500" },
-          "body": { "font": "Lora (or Source Serif Pro); Label: Jost (or Montserrat) 12-13px / 500, letter-spacing 0.08em", "sizes": "16-18px / 400, line-height 1.7. Serif dominates; may use Jost (light geometric sans) for labels and captions." }
+          "header": {
+            "font": "Playfair Display (or Cormorant Garamond)",
+            "sizes": "Display: H1 40-56px / 500-600, italic variant; Header: H2 28-36px / 500"
+          },
+          "body": {
+            "font": "Lora (or Source Serif Pro); Label: Jost (or Montserrat) 12-13px / 500, letter-spacing 0.08em",
+            "sizes": "16-18px / 400, line-height 1.7. Serif dominates; may use Jost (light geometric sans) for labels and captions."
+          }
         },
         "visualElements": [
           "Glass cards: backdrop-filter: blur(15px), background rgba(255,255,255,0.35), border 1px solid rgba(255,255,255,0.5)",
@@ -585,9 +1216,23 @@
           "Premium editorial: luxury online magazines, lifestyle blogs - editorial style with depth"
         ],
         "combinations": {
-          "good": ["aurora-ui", "glassmorphism"],
-          "caution": [],
-          "avoid": ["maximalism", "brutalism-ui", "collage-art"]
+          "good": [
+            "neumorphism",
+            "aurora-ui",
+            "glassmorphism"
+          ],
+          "caution": [
+            "minimalism",
+            "flat-design",
+            "claymorphism",
+            "skeuomorphism",
+            "retro"
+          ],
+          "avoid": [
+            "maximalism",
+            "brutalism-ui",
+            "collage-art"
+          ]
         },
         "antiPatterns": [
           "Using neon or overly vibrant colors (#00FFFF, #FF00FF) - breaks the warm, contemplative palette",
@@ -595,8 +1240,19 @@
           "Asymmetrical layouts with imbalanced whitespace - class morphism values golden ratio and symmetrical balance"
         ]
       },
-      "relatedStyles": ["aurora-ui", "neumorphism", "glassmorphism"],
-      "tags": ["luxury", "elegant", "serif", "gold", "warm", "glass"]
+      "relatedStyles": [
+        "aurora-ui",
+        "neumorphism",
+        "glassmorphism"
+      ],
+      "tags": [
+        "luxury",
+        "elegant",
+        "serif",
+        "gold",
+        "warm",
+        "glass"
+      ]
     },
     {
       "id": "glassmorphism",
@@ -613,17 +1269,51 @@
           "Hierarchy through transparency levels: 2-3 transparency levels (e.g., 30% for main cards, 15% for secondary panels) distinguish hierarchy without borders."
         ],
         "palette": [
-          { "role": "Background gradient 1", "hex": "#667EEA", "notes": "Indigo - gradient start" },
-          { "role": "Background gradient 2", "hex": "#764BA2", "notes": "Purple - gradient end, accent" },
-          { "role": "Glass fill", "hex": "#FFFFFF (10-20% opacity)", "notes": "Glass card fill" },
-          { "role": "Glass border", "hex": "#FFFFFF (30-60% opacity)", "notes": "1px border creating the light-catching edge" },
-          { "role": "Primary text", "hex": "#FFFFFF (95-100% opacity)", "notes": "White text on glass" },
-          { "role": "Secondary text", "hex": "#FFFFFF (60-75% opacity)", "notes": "Meta, caption" },
-          { "role": "Ambient shadow", "hex": "#1F2687 (20% opacity)", "notes": "Soft dark purple shadow below the panel" }
+          {
+            "role": "Background gradient 1",
+            "hex": "#667EEA",
+            "notes": "Indigo - gradient start"
+          },
+          {
+            "role": "Background gradient 2",
+            "hex": "#764BA2",
+            "notes": "Purple - gradient end, accent"
+          },
+          {
+            "role": "Glass fill",
+            "hex": "#FFFFFF (10-20% opacity)",
+            "notes": "Glass card fill"
+          },
+          {
+            "role": "Glass border",
+            "hex": "#FFFFFF (30-60% opacity)",
+            "notes": "1px border creating the light-catching edge"
+          },
+          {
+            "role": "Primary text",
+            "hex": "#FFFFFF (95-100% opacity)",
+            "notes": "White text on glass"
+          },
+          {
+            "role": "Secondary text",
+            "hex": "#FFFFFF (60-75% opacity)",
+            "notes": "Meta, caption"
+          },
+          {
+            "role": "Ambient shadow",
+            "hex": "#1F2687 (20% opacity)",
+            "notes": "Soft dark purple shadow below the panel"
+          }
         ],
         "typography": {
-          "header": { "font": "Inter (or SF Pro Display)", "sizes": "H1: 40-64px / 600-700" },
-          "body": { "font": "Inter (or SF Pro Text); Label: Inter 12-14px / 500, letter-spacing 0.05em", "sizes": "15-17px / 400-500, line-height 1.5. All text on glass must be white or near-white." }
+          "header": {
+            "font": "Inter (or SF Pro Display)",
+            "sizes": "H1: 40-64px / 600-700"
+          },
+          "body": {
+            "font": "Inter (or SF Pro Text); Label: Inter 12-14px / 500, letter-spacing 0.05em",
+            "sizes": "15-17px / 400-500, line-height 1.5. All text on glass must be white or near-white."
+          }
         },
         "visualElements": [
           "Glass cards: rgba(255,255,255,0.15) fill + backdrop-filter: blur(20px) saturate(180%) + 1px rgba(255,255,255,0.3) border, 16-24px radius",
@@ -640,9 +1330,23 @@
           "Quick-setting panels: control centers, notification centers, toolbar overlays - following Apple visionOS/window systems"
         ],
         "combinations": {
-          "good": ["aurora-ui", "class-morphism", "claymorphism", "flat-design", "minimalism"],
-          "caution": ["neumorphism", "maximalism", "collage-art"],
-          "avoid": ["brutalism-ui", "skeuomorphism", "retro"]
+          "good": [
+            "minimalism",
+            "flat-design",
+            "claymorphism",
+            "aurora-ui",
+            "class-morphism"
+          ],
+          "caution": [
+            "maximalism",
+            "neumorphism",
+            "collage-art"
+          ],
+          "avoid": [
+            "brutalism-ui",
+            "skeuomorphism",
+            "retro"
+          ]
         },
         "antiPatterns": [
           "Glass on plain backgrounds: glass panels over white/gray backgrounds lose any visible effect - frosted glass requires a vibrant, detailed background behind it",
@@ -651,8 +1355,18 @@
           "Over-blurring everything: backdrop-filter blur(40px+) across many elements is GPU-expensive and causes jank on mobile - limit blur radius (10-30px) and glass surfaces per screen"
         ]
       },
-      "relatedStyles": ["aurora-ui", "class-morphism", "claymorphism"],
-      "tags": ["glass", "frosted", "blur", "transparency", "depth"]
+      "relatedStyles": [
+        "aurora-ui",
+        "class-morphism",
+        "claymorphism"
+      ],
+      "tags": [
+        "glass",
+        "frosted",
+        "blur",
+        "transparency",
+        "depth"
+      ]
     }
   ]
 }

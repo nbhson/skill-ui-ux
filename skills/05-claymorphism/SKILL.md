@@ -1,3 +1,10 @@
+---
+name: claymorphism
+description: 3D rounded, soft, squeezable clay-like UI with internal gradients, super-rounded corners, and floating multi-layer shadows.
+tags: [3d, rounded, clay, floating, apple-style]
+related: [neumorphism, aurora-ui, glassmorphism]
+---
+
 # UI/UX Skill: Claymorphism
 
 ## 1. Definition

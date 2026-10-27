@@ -1,6 +1,6 @@
 # 🎨 Design References & Inspiration Sources
 
-Curated reference sources for each of the 11 styles. Figma Community search links are stable URLs (`figma.com/community/search?resource_type=files&search=...`) that always return current results.
+Curated reference sources for each of the 12 styles. Figma Community search links are stable URLs (`figma.com/community/search?resource_type=files&search=...`) that always return current results.
 
 ## Figma Community Search Links
 
@@ -49,7 +49,7 @@ Curated reference sources for each of the 11 styles. Figma Community search link
 
 ## Quick-Start CSS/Design Tokens
 
-Minimal tokens to begin a project per style (see each skill.md for full palettes):
+Minimal tokens to begin a project per style (see each style's `SKILL.md` for full palettes):
 
 - **Neumorphism:** `--bg: #E4E9F2; --shadow-dark: rgba(163,177,198,.5); --shadow-light: rgba(255,255,255,.7);`
 - **Claymorphism:** `--radius: 32px; --near-shadow: rgba(0,0,0,.1); --far-shadow: rgba(99,102,241,.15);`

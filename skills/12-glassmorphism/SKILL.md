@@ -1,3 +1,10 @@
+---
+name: glassmorphism
+description: Frosted glass panels: semi-transparent fills, backdrop blur, 1px light borders, and soft shadows layered over vibrant backgrounds.
+tags: [glass, frosted, blur, transparency, depth]
+related: [aurora-ui, class-morphism, claymorphism]
+---
+
 # UI/UX Skill: Glassmorphism
 
 ## 1. Definition
