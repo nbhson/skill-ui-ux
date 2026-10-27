@@ -25,7 +25,14 @@ A professional reference guide for 12 UI/UX design styles, each with full covera
 
 ```json
 {
-  "styles": [{ "id": "neumorphism", "palette": [...], "combinations": {...}, "antiPatterns": [...] }]
+  "styles": [{
+    "id": "neumorphism",
+    "sections": {
+      "palette": [{ "role": "...", "hex": "#..." }],
+      "combinations": { "good": [...], "caution": [...], "avoid": [...] },
+      "antiPatterns": ["..."]
+    }
+  }]
 }
 ```
 

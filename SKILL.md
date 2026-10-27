@@ -67,7 +67,7 @@ Each style guide lives in `skills/<NN-<style>>/SKILL.md` and follows an 8-sectio
 For programmatic use (design linting, design-token generation, AI agents), read [`skills/data.json`](./skills/data.json) — all 12 styles as structured JSON with a fully symmetric combination matrix:
 
 ```json
-{ "styles": [{ "id": "neumorphism", "palette": [...], "combinations": {...}, "antiPatterns": [...] }] }
+{ "styles": [{ "id": "neumorphism", "sections": { "palette": [...], "combinations": {...}, "antiPatterns": [...] } }] }
 ```
 
 ## References & Inspiration
