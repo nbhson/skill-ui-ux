@@ -9,7 +9,7 @@ related: [aurora-ui, neumorphism, glassmorphism]
 
 ## 1. Definition
 
-Class Morphism (also known as "Classy Morphism") is a style that combines the elegance of Classicism with the depth principles of Morphism (neumorphism, glassmorphism). This style features: (1) golden ratio, symmetrical balance like classical design; (2) soft shadows and/or backdrop blur like morphic design; (3) warm, contemplative palettes instead of overly vibrant ones; and (4) medium-weight serif typography. Overall, Class Morphism creates a "luxurious, contemplative, with depth" feel — suitable for luxury brands and premium products.
+Class Morphism (also known as "Classy Morphism" — not a universal industry term; coined by this skill set to describe the luxury classic + morphic hybrid) is a style that combines the elegance of Classicism with the depth principles of Morphism (neumorphism, glassmorphism). This style features: (1) golden ratio, symmetrical balance like classical design; (2) soft shadows and/or backdrop blur like morphic design; (3) warm, contemplative palettes instead of overly vibrant ones; and (4) medium-weight serif typography. Overall, Class Morphism creates a "luxurious, contemplative, with depth" feel — suitable for luxury brands and premium products.
 
 ## 2. Core Design Principles
 

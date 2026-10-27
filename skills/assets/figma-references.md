@@ -23,7 +23,7 @@ Curated reference sources for each of the 12 styles. Figma Community search link
 
 | Style | Exemplary References |
 |---|---|
-| Minimalism | linear.app, notion.so, stripe.com,Things by Cultured Code |
+| Minimalism | linear.app, notion.so, stripe.com, Things by Cultured Code |
 | Maximalism | gucci.com campaigns, dropbox.com/brand, gumroad.com |
 | Flat Design | windows.com (Metro heritage), material.io (baseline), gov.uk |
 | Neumorphism | neumorphism.io (generator), Apple Fitness+ marketing pages |
@@ -51,9 +51,10 @@ Curated reference sources for each of the 12 styles. Figma Community search link
 
 Minimal tokens to begin a project per style (see each style's `SKILL.md` for full palettes):
 
-- **Neumorphism:** `--bg: #E4E9F2; --shadow-dark: rgba(163,177,198,.5); --shadow-light: rgba(255,255,255,.7);`
-- **Claymorphism:** `--radius: 32px; --near-shadow: rgba(0,0,0,.1); --far-shadow: rgba(99,102,241,.15);`
-- **Aurora:** `backdrop-filter: blur(20px); background: rgba(255,255,255,0.1);`
-- **Brutalism:** `border: 3px solid #000; box-shadow: 4px 4px 0 #000;`
-- **Class Morphism:** `box-shadow: 0 8px 32px rgba(139,115,85,.12); backdrop-filter: blur(15px);`
 - **Glassmorphism:** `background: rgba(255,255,255,.15); backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,.3); box-shadow: 0 8px 32px rgba(31,38,135,.2);`
+- **Minimalism:** `--bg: #FFFFFF; --text: #111111; --text-secondary: #6B7280; --accent: #2563EB; --radius: 4px;`
+- **Maximalism:** `--dominant: #7C3AED; --accent-hot: #FF3EA5; --accent-cool: #22D3EE; --text: #1A1024; --border: 3px solid #000;`
+- **Flat Design:** `--bg: #F8FAFC; --primary: #3B82F6; --success: #10B981; --warning: #F59E0B; --danger: #EF4444; --text: #1E293B; --radius: 8px;`
+- **Collage Art:** `--bg-texture: #F5F0E8; --layer-1: #C026D3; --layer-2: #F59E0B; --layer-3: #06B6D4; --text: #1E293B;`
+- **Skeuomorphism:** `--leather: #8B5A2B; --metal: linear-gradient(#C0C0C0, #E8E8E8); --bevel-light: rgba(255,255,255,.3); --bevel-dark: rgba(0,0,0,.4);`
+- **Retro (synthwave 80s):** `--bg: #0D0221; --neon-pink: #FF6EC7; --neon-cyan: #00FFFF; --neon-purple: #FF00FF; --glow: 0 0 10px #FF6EC7;`

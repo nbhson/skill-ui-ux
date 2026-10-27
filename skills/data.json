@@ -104,9 +104,10 @@
           ]
         },
         "antiPatterns": [
-          "Introducing a second focal point or competing visual emphasis on the same screen",
-          "Adding decorative shadows, gradients, or textures that serve no functional purpose",
-          "Cramming copy: long paragraphs and verbose microcopy that should be trimmed to the minimum needed for comprehension"
+          "Removing too much: stripping away essential elements like navigation labels, progress indicators, or status cues leaves users without the context they need to make decisions",
+          "Unintentional imbalance: excessive whitespace can make layouts feel disconnected, while too little creates visual crowding—white space must serve a purpose, not merely exist",
+          "No hierarchy: without typography or color to establish focal points, users cannot discern what matters most on the screen",
+          "Grayscale for the wrong reasons: avoiding color entirely when a single accent would improve navigation and user experience is a missed opportunity, not a virtue"
         ]
       },
       "relatedStyles": [
@@ -207,9 +208,10 @@
           ]
         },
         "antiPatterns": [
-          "Chaos without a visual axis: no dominant color or large title to anchor the eye among the density",
-          "Random decoration: patterns, stickers, and textures unrelated to the brand or content story",
-          "Color chaos: more than 3 'hot' colors in the same viewport, or no single dominant color occupying 40-50% of the area"
+          "Visual noise without anchor: layering vibrant colors, patterns, and typography without a dominant focal point creates chaos instead of energy—the eye needs somewhere to rest",
+          "No breathing room: packing every pixel with content exhausts users; even in maximalism, visual rhythm requires zones of lower density",
+          "Random decoration: using patterns, stickers, or textures that have no relation to the brand message undermines the intentionality that makes maximalism compelling",
+          "Everything competing for attention: when every element is bold, colorful, and large, nothing stands out—the principle of \"dominant color\" (occupying 40-50% of area) is often ignored"
         ]
       },
       "relatedStyles": [
@@ -316,9 +318,10 @@
           ]
         },
         "antiPatterns": [
-          "Reintroducing depth: heavy gradients, 3D shadows, bevels, or textures that break the 2D essence",
-          "Low-contrast color pairs: background/text combinations below the 4.5:1 contrast ratio",
-          "Gradient-filled or multicolor icons that break the solid single-color glyph rule"
+          "Confusing interactive states: removing all shadows makes it difficult for users to distinguish buttons from cards or identify clickable elements—some form of visual feedback is essential",
+          "Low contrast combinations: pairing colors with insufficient contrast (e.g., light gray text on white) violates flat design's core emphasis on clarity and legibility",
+          "Insufficient typography weight: using thin, light fonts at small sizes leaves text unreadable because the lack of shadow-based depth was not compensated for through type treatment",
+          "Over-flattening everything: applying flat styling uniformly to all contexts, including complex charts or data visualizations, loses the nuance needed for information hierarchy"
         ]
       },
       "relatedStyles": [
@@ -364,13 +367,15 @@
           },
           {
             "role": "Light shadow",
-            "hex": "#FFFFFF (70% opacity)",
-            "notes": "Top-left corner"
+            "hex": "#FFFFFF",
+            "notes": "Top-left corner",
+            "opacity": "70% opacity"
           },
           {
             "role": "Dark shadow",
-            "hex": "#A3B1C6 (50% opacity)",
-            "notes": "Bottom-right corner"
+            "hex": "#A3B1C6",
+            "notes": "Bottom-right corner",
+            "opacity": "50% opacity"
           },
           {
             "role": "Accent color",
@@ -425,9 +430,10 @@
           ]
         },
         "antiPatterns": [
-          "Mixing neumorphic elements with high-contrast flat elements in the same component zone",
-          "Inconsistent shadow symmetry: unequal blur/spread or mismatched light/dark shadow angles",
-          "Data-heavy dashboards: neumorphism is unsuitable for data-dense interfaces because subtle shadows don't provide enough layer differentiation"
+          "Background-element color convergence: using background and element colors that differ by less than 5% makes interactive elements nearly invisible—legibility must take precedence over subtle aesthetics",
+          "Inconsistent shadow values: applying different blur, spread, or opacity values across buttons and cards breaks the unified soft-material illusion that defines neumorphism",
+          "Low-contrast text: pairing gray-on-gray elements with soft shadows results in text that fails accessibility standards—the neumorphic aesthetic requires deliberate contrast planning",
+          "Static interfaces: neumorphism relies on shadow transitions to communicate pressed/raised states; without clear interaction feedback, the tactile quality that distinguishes this style is lost"
         ]
       },
       "relatedStyles": [
@@ -464,33 +470,39 @@
           },
           {
             "role": "Clay block 1",
-            "hex": "#7C3AED -> #8B5CF6",
-            "notes": "Purple gradient, 32px border-radius"
+            "hex": "#7C3AED",
+            "notes": "Purple gradient, 32px border-radius",
+            "gradientTo": "#8B5CF6"
           },
           {
             "role": "Clay block 2",
-            "hex": "#F472B6 -> #FB7185",
-            "notes": "Pink-coral gradient"
+            "hex": "#F472B6",
+            "notes": "Pink-coral gradient",
+            "gradientTo": "#FB7185"
           },
           {
             "role": "Clay block 3",
-            "hex": "#34D399 -> #6EE7B7",
-            "notes": "Mint green gradient"
+            "hex": "#34D399",
+            "notes": "Mint green gradient",
+            "gradientTo": "#6EE7B7"
           },
           {
             "role": "Highlight",
-            "hex": "#FFFFFF (40-60% opacity)",
-            "notes": "Light zone at the top"
+            "hex": "#FFFFFF",
+            "notes": "Light zone at the top",
+            "opacity": "40-60% opacity"
           },
           {
             "role": "Near shadow",
-            "hex": "#000000 (10% opacity)",
-            "notes": "Small, sharp shadow"
+            "hex": "#000000",
+            "notes": "Small, sharp shadow",
+            "opacity": "10% opacity"
           },
           {
             "role": "Far shadow",
-            "hex": "#6366F1 (15% opacity)",
-            "notes": "Large, blurred shadow, subtle purple tint"
+            "hex": "#6366F1",
+            "notes": "Large, blurred shadow, subtle purple tint",
+            "opacity": "15% opacity"
           }
         ],
         "typography": {
@@ -535,9 +547,10 @@
           ]
         },
         "antiPatterns": [
-          "Forgetting the internal gradient: a clay block without a top-to-bottom gradient is just a rounded neumorphic card",
-          "Using non-rounded fonts (e.g., Arial Black) alongside clay blocks, creating severe visual conflict",
-          "Mixing neumorphism and claymorphism in the same viewport without clear zone separation"
+          "Forgetting the inner gradient: clay blocks without internal gradients look like flat rounded rectangles rather than 3D clay pieces—the inner gradient is what creates the squeezable illusion",
+          "Uniform rounding everywhere: applying 50%+ border-radius to every single element turns the interface into a blob—vary the rounding to maintain visual hierarchy and interest",
+          "Lone elements without overlap: clay blocks that float in isolation miss the tactile, connected quality of the style; subtle overlaps between blocks reinforce the \"molded clay\" feel",
+          "Overloaded color palette: using too many saturated colors across multiple clay blocks fragments the cohesive effect—limit to 2-3 prominent color families for harmony"
         ]
       },
       "relatedStyles": [
@@ -600,8 +613,9 @@
           },
           {
             "role": "Text",
-            "hex": "#FFFFFF (90% opacity)",
-            "notes": "Soft white, light shadow"
+            "hex": "#FFFFFF",
+            "notes": "Soft white, light shadow",
+            "opacity": "90% opacity"
           }
         ],
         "typography": {
@@ -646,9 +660,10 @@
           ]
         },
         "antiPatterns": [
-          "Placing detailed photographs or live video directly over aurora without an intermediate glass overlay",
-          "Using thick black lines or heavy dark text on aurora backgrounds - destroys the soft light aesthetic",
-          "Over-animating: gradients that move too fast or are too attention-grabbing (cycle should be 8-20s minimum)"
+          "Jarring or distracting motion: fast, abrupt gradient animations defeat the ethereal quality of aurora—the gentle, slow movement is what makes the effect feel magical",
+          "Sharp photographs on soft gradients: placing detailed images or videos directly over aurora backgrounds creates visual conflict; always use a glass intermediary layer",
+          "Dark text on bright aurora: dark text on vibrant gradient backgrounds is difficult to read—white text with soft shadow is non-negotiable for accessibility",
+          "Over-blurring: applying excessive bokeh blur (80px+) everywhere creates an unfocused, inaccessible interface; blur should enhance depth, not obscure content"
         ]
       },
       "relatedStyles": [
@@ -755,9 +770,10 @@
           ]
         },
         "antiPatterns": [
-          "Soft shadows or rounded corners: anything that smooths or prettifies the 'raw' aesthetic",
-          "Gray colors: either #000 or #FFF with high-contrast unnatural colors - muted intermediate colors break the brutalist palette rule",
-          "Combining with Neumorphism, Claymorphism, or Aurora UI: diametrically opposite in every element, producing an 'indecisive mix'"
+          "Confusing intentionality with negligence: truly disordered layouts (randomly rotated everything, completely broken grids) may read as amateur mistakes rather than deliberate anti-design—some hidden logic must remain",
+          "Usability sacrificed for shock value: using tiny click targets, illegible type, or poor contrast under the guise of brutalism damages user experience without artistic justification",
+          "Half-hearted boldness: mixing bold brutalist elements with polished, refined ones creates indecision rather than tension—a committed brutalist approach is more effective",
+          "Random interactivity: adding marquees or scroll effects without purpose feels gimmicky; every \"raw\" element should have intentional function alongside its aesthetic"
         ]
       },
       "relatedStyles": [
@@ -860,9 +876,10 @@
           ]
         },
         "antiPatterns": [
-          "Layers with competing opacities that make content and hierarchy unreadable",
-          "Too many font families (>3) resulting in visual noise rather than the intentional 'cut-and-paste' variety",
-          "Combining with Neumorphism or Minimalism: collage requires visual richness while minimalism/neumorphism require simplicity - fundamentally incompatible"
+          "Layers obscuring content: stacking images and shapes at full opacity without text containers renders labels and CTAs unreadable—accessibility requires that key content remains visible",
+          "Random visual assembly: combining disparate images, fonts, and colors without a unifying theme or dominant color creates noise rather than a cohesive collage",
+          "Static composition: without rotation, scaling, or overlapping elements, the collage reads as a standard grid layout—motion and asymmetry are essential to the style",
+          "Uniform palette: using the same color for all layers eliminates the visual depth that comes from contrasting warm and cool tones against textured backgrounds"
         ]
       },
       "relatedStyles": [
@@ -909,23 +926,27 @@
           },
           {
             "role": "Silver metal",
-            "hex": "#C0C0C0 -> #E8E8E8",
-            "notes": "Metal gradient"
+            "hex": "#C0C0C0",
+            "notes": "Metal gradient",
+            "gradientTo": "#E8E8E8"
           },
           {
             "role": "Gold metal",
-            "hex": "#D4AF37 -> #FFD700",
-            "notes": "Brass/gold"
+            "hex": "#D4AF37",
+            "notes": "Brass/gold",
+            "gradientTo": "#FFD700"
           },
           {
             "role": "Highlight",
-            "hex": "#FFFFFF (30% opacity)",
-            "notes": "Light on the surface"
+            "hex": "#FFFFFF",
+            "notes": "Light on the surface",
+            "opacity": "30% opacity"
           },
           {
             "role": "Dark shadow",
-            "hex": "#000000 (30-50% opacity)",
-            "notes": "Drop shadow"
+            "hex": "#000000",
+            "notes": "Drop shadow",
+            "opacity": "30-50% opacity"
           }
         ],
         "typography": {
@@ -970,9 +991,10 @@
           ]
         },
         "antiPatterns": [
-          "Mixing multiple material textures (leather + wood + metal) on a single screen without a clear dominant material",
-          "Combining with neumorphic or glassmorphic shadows in the same component, causing chaotic depth",
-          "Over-skeuomorphic UI in modern contexts: today's users expect cleaner, faster-loading interfaces - use selectively"
+          "Texture everything: covering every surface with leather, wood, and metal textures overwhelms the interface and makes it feel cluttered rather than tactile—the \"real material\" should be applied selectively",
+          "Mismatched metaphors: applying skeuomorphic styling to contexts where the physical metaphor doesn't fit (e.g., a banking app designed as a leather notebook) creates confusion rather than familiarity",
+          "Texture over readability: heavy material patterns behind text or icons diminish legibility—the real-world metaphor should enhance, not obstruct, usability",
+          "Stuck in 2010: continuing to use heavy skeuomorphism (deep gradients, prominent bevels) when modern design has moved toward subtlety makes the interface appear dated rather than nostalgic"
         ]
       },
       "relatedStyles": [
@@ -1119,9 +1141,10 @@
           ]
         },
         "antiPatterns": [
-          "Mixing multiple decades (50s + 80s + 90s) in a single viewport without intentional collage framing",
-          "Using modern sans-serif fonts (Inter, Roboto) within a retro aesthetic, breaking period authenticity",
-          "Retro requires visual richness: applying retro palette and motifs to a sparse, empty layout loses the era's spirit"
+          "Mixing eras: combining 1950s diners, 1980s neon, and 1990s Y2K aesthetics in one viewport creates temporal confusion—the chosen decade should be clear and consistent",
+          "Style over usability: using tiny pixel fonts, excessive scanlines, or low-contrast retro colors that impair readability sacrifices function for form",
+          "Surface nostalgia: merely applying scanlines and halftones without understanding the genuine spirit of the era produces inauthentic, superficial retro that feels like costume rather than design",
+          "Uniform treatment: applying retro styling to every element equally (header, body, buttons, inputs) flattens the hierarchy—retro treatment should emphasize focal points while modern principles guide functional elements"
         ]
       },
       "relatedStyles": [
@@ -1141,7 +1164,7 @@
       "name": "Class Morphism",
       "summary": "Elegant classicism meets morphic depth: golden ratio layouts, warm shadows, glass panels, and refined serif typography.",
       "sections": {
-        "definition": "Class Morphism (also known as 'Classy Morphism') is a style that combines the elegance of Classicism with the depth principles of Morphism (neumorphism, glassmorphism). This style features: (1) golden ratio, symmetrical balance like classical design; (2) soft shadows and/or backdrop blur like morphic design; (3) warm, contemplative palettes instead of overly vibrant ones; and (4) medium-weight serif typography. Overall, Class Morphism creates a 'luxurious, contemplative, with depth' feel - suitable for luxury brands and premium products.",
+        "definition": "Class Morphism (also known as 'Classy Morphism' — not a universal industry term; coined by this skill set to describe the luxury classic + morphic hybrid) is a style that combines the elegance of Classicism with the depth principles of Morphism (neumorphism, glassmorphism). This style features: (1) golden ratio, symmetrical balance like classical design; (2) soft shadows and/or backdrop blur like morphic design; (3) warm, contemplative palettes instead of overly vibrant ones; and (4) medium-weight serif typography. Overall, Class Morphism creates a 'luxurious, contemplative, with depth' feel - suitable for luxury brands and premium products.",
         "principles": [
           "Golden ratio / Symmetrical balance: layouts use 1:1.618 or 3:5 ratios, elements arranged symmetrically or near-symmetrically - different from asymmetrical modern design.",
           "Gentle morphic effects: warm soft shadows (not cold shadows like pure neumorphism) or subtle glass effect - creating depth without being overly 'popping.'",
@@ -1158,8 +1181,9 @@
           },
           {
             "role": "Glass background",
-            "hex": "#FFFFFF (30-50% opacity)",
-            "notes": "Transparent panel over background"
+            "hex": "#FFFFFF",
+            "notes": "Transparent panel over background",
+            "opacity": "30-50% opacity"
           },
           {
             "role": "Dominant color",
@@ -1178,8 +1202,9 @@
           },
           {
             "role": "Shadow",
-            "hex": "#8B7355 (12% opacity)",
-            "notes": "Warm shadow, not cold gray"
+            "hex": "#8B7355",
+            "notes": "Warm shadow, not cold gray",
+            "opacity": "12% opacity"
           },
           {
             "role": "Primary text",
@@ -1235,9 +1260,10 @@
           ]
         },
         "antiPatterns": [
-          "Using neon or overly vibrant colors (#00FFFF, #FF00FF) - breaks the warm, contemplative palette",
-          "Too many ornaments (excessive florals, ripples, decorative borders) - takes the spirit of classicism but loses the modern refinement",
-          "Asymmetrical layouts with imbalanced whitespace - class morphism values golden ratio and symmetrical balance"
+          "Ornamental excess: overusing classical decorations (floral borders, ornate dividers, excessive gold accents) contradicts the understated elegance that defines class morphism—restraint is key",
+          "Forced symmetry: applying symmetrical layouts to inherently asymmetrical content (like social feeds or news streams) creates awkward, unnatural arrangements—symmetry serves composition, not the reverse",
+          "Cool-glass-on-warm-classic: adding glassmorphism panels with cold blue tints over warm champagne and navy backgrounds creates a jarring contrast that undermines the contemplative palette",
+          "Modern-bold mixing: pairing heavy modern sans-serif fonts (Arial Black, Helvetica Bold) with delicate serif typography creates visual discord—class morphism demands refined, medium-weight fonts throughout"
         ]
       },
       "relatedStyles": [
@@ -1281,28 +1307,33 @@
           },
           {
             "role": "Glass fill",
-            "hex": "#FFFFFF (10-20% opacity)",
-            "notes": "Glass card fill"
+            "hex": "#FFFFFF",
+            "notes": "Glass card fill",
+            "opacity": "10-20% opacity"
           },
           {
             "role": "Glass border",
-            "hex": "#FFFFFF (30-60% opacity)",
-            "notes": "1px border creating the light-catching edge"
+            "hex": "#FFFFFF",
+            "notes": "1px border creating the light-catching edge",
+            "opacity": "30-60% opacity"
           },
           {
             "role": "Primary text",
-            "hex": "#FFFFFF (95-100% opacity)",
-            "notes": "White text on glass"
+            "hex": "#FFFFFF",
+            "notes": "White text on glass",
+            "opacity": "95-100% opacity"
           },
           {
             "role": "Secondary text",
-            "hex": "#FFFFFF (60-75% opacity)",
-            "notes": "Meta, caption"
+            "hex": "#FFFFFF",
+            "notes": "Meta, caption",
+            "opacity": "60-75% opacity"
           },
           {
             "role": "Ambient shadow",
-            "hex": "#1F2687 (20% opacity)",
-            "notes": "Soft dark purple shadow below the panel"
+            "hex": "#1F2687",
+            "notes": "Soft dark purple shadow below the panel",
+            "opacity": "20% opacity"
           }
         ],
         "typography": {
@@ -1349,10 +1380,10 @@
           ]
         },
         "antiPatterns": [
-          "Glass on plain backgrounds: glass panels over white/gray backgrounds lose any visible effect - frosted glass requires a vibrant, detailed background behind it",
-          "Nested glass panels: stacking glass inside glass doubles blur cost and muddies contrast - keep one glass layer per visual region",
-          "Failing contrast: light gray or dark text on glass commonly fails WCAG AA (4.5:1) - always verify text contrast over the busiest background area",
-          "Over-blurring everything: backdrop-filter blur(40px+) across many elements is GPU-expensive and causes jank on mobile - limit blur radius (10-30px) and glass surfaces per screen"
+          "Glass on plain backgrounds: placing glass panels over white/gray backgrounds removes any visible effect — the frosted glass requires a vibrant, detailed background behind it",
+          "Nested glass panels: stacking glass inside glass (panel within panel) doubles blur cost and muddies contrast — keep one glass layer per visual region",
+          "Failing contrast: transparency + blur reduces contrast; light gray or dark text on glass commonly fails WCAG AA (4.5:1) — always verify text contrast over the busiest background area",
+          "Over-blurring everything: applying `backdrop-filter: blur(40px+)` across many elements is GPU-expensive and causes jank on mobile — limit blur radius (10–30px) and the number of glass surfaces per screen"
         ]
       },
       "relatedStyles": [

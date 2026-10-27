@@ -36,7 +36,7 @@ A professional reference guide for 12 UI/UX design styles, each with full covera
 ## 🎯 How to Use
 
 1. **Select a style:** use the summary table to choose the skill that fits your product/brand.
-2. **Read SKILL.md:** each file follows 8 standard sections (definition → principles → colors → font → visual → applications → combinations).
+2. **Read SKILL.md:** each file follows 8 standard sections (definition → principles → colors → font → visual → applications → combinations → anti-patterns).
 3. **Apply:** use the hex palette + font pair + visual rules as standards when designing. For AI agents: use the root `SKILL.md` router to select a style, then the appropriate `SKILL.md` guide for detailed implementation.
 
 ## 🤖 AI Agent Usage
