@@ -35,6 +35,17 @@ python3 scripts/validate_skills.py  →  All checks passed ✓
 
 ## Backlog đề xuất
 
-- [ ] GitHub Actions workflow chạy `validate_skills.py` tự động
-- [ ] Thêm ví dụ CSS tokens khởi động cho từng style vào `assets/`
-- [ ] Kiểm tra tương thích phiên bản: thêm section "Version" vào root SKILL.md
+- [x] GitHub Actions workflow chạy `validate_skills.py` tự động (`.github/workflows/validate.yml`)
+- [x] Thêm ví dụ CSS tokens khởi động cho từng style vào `assets/`
+- [x] Kiểm tra tương thích phiên bản: thêm section "Version" vào root SKILL.md
+
+### Chi tiết vòng 29/10
+
+- `assets/css/<style-id>.css` × 12: starter tokens sinh từ `skills/data.json`
+  (nguồn truth) — mỗi hex kèm role + notes, font tokens từ typography section
+- `scripts/validate_skills.py` thêm **check #8**: file token phải tồn tại cho
+  mọi style, hex phải khớp data.json (chống drift), không có file thừa.
+  Đã test negative case: sửa hex → FAIL; restore → pass
+- `SKILL.md`: thêm section **Version** (schema version, styles count,
+  compatibility, hướng dẫn bump version khi đổi schema)
+- `figma-references.md`: liên kết tới full token files

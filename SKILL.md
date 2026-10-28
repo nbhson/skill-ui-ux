@@ -70,6 +70,15 @@ For programmatic use (design linting, design-token generation, AI agents), read 
 { "styles": [{ "id": "neumorphism", "sections": { "palette": [...], "combinations": {...}, "antiPatterns": [...] } }] }
 ```
 
+## Version
+
+- **Schema version:** 1.0 (xem `skills/data.json` → `meta.version`)
+- **Styles:** 12 (duyệt `skills/*/SKILL.md` hoặc `data.json` → `styles[].id`)
+- **Compatibility:** hoạt động độc lập, không phụ thuộc framework; CSS tokens ở `assets/css/` dùng CSS custom properties chuẩn (mọi browser hiện đại)
+- **Changelog:** xem [plan/readme.md](./plan/readme.md)
+
+Khi thay đổi cấu trúc `data.json` (thêm/xóa section), tăng `meta.version` và cập nhật section này.
+
 ## References & Inspiration
 
 Curated Figma Community search links, real-world reference sites, stock asset sources, and quick-start CSS tokens per style: [`skills/assets/figma-references.md`](./skills/assets/figma-references.md).

@@ -58,3 +58,5 @@ Minimal tokens to begin a project per style (see each style's `SKILL.md` for ful
 - **Collage Art:** `--bg-texture: #F5F0E8; --layer-1: #C026D3; --layer-2: #F59E0B; --layer-3: #06B6D4; --text: #1E293B;`
 - **Skeuomorphism:** `--leather: #8B5A2B; --metal: linear-gradient(#C0C0C0, #E8E8E8); --bevel-light: rgba(255,255,255,.3); --bevel-dark: rgba(0,0,0,.4);`
 - **Retro (synthwave 80s):** `--bg: #0D0221; --neon-pink: #FF6EC7; --neon-cyan: #00FFFF; --neon-purple: #FF00FF; --glow: 0 0 10px #FF6EC7;`
+
+**Full starter token files (mỗi style 1 file, sinh từ data.json):** [`assets/css/<style-id>.css`](../../assets/css/) — ví dụ `assets/css/minimalism.css`. Tất cả 12 style có file riêng với màu + font tokens dạng CSS custom properties.

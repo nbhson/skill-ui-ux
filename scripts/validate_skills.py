@@ -9,7 +9,8 @@ Checks:
   4. palette hex values are plain #RGB / #RRGGBB
   5. README Combination Matrix is symmetric and matches data.json combinations
   6. Figma reference links are well-formed URLs
-  7. .gitignore covers common noise files
+  7. CSS token files in assets/css/ exist per style and match data.json palettes
+  8. .gitignore covers common noise files
 
 Exit 0 on success, non-zero on any failure.
 """
@@ -199,9 +200,32 @@ if fr_path.exists():
 else:
     fail("  figma-references.md not found")
 
-# ── 8. .gitignore ─────────────────────────────────────────────────────────────
+# ── 8. CSS token files ↔ data.json consistency ──────────────────────────────
 
-print("\n8. .gitignore coverage:")
+print("\n8. CSS token files (assets/css):")
+css_dir = ROOT / "assets" / "css"
+styles = data.get("styles", []) if "data" in dir() else []
+for s in styles:
+    sid = s["id"]
+    css_path = css_dir / f"{sid}.css"
+    if not css_path.exists():
+        fail(f"missing assets/css/{sid}.css")
+        continue
+    css_text = css_path.read_text()
+    # Mỗi hex trong data.json palette phải xuất hiện trong file token
+    for entry in s["sections"].get("palette", []):
+        hx = entry["hex"].lower()
+        if hx not in css_text.lower():
+            fail(f"assets/css/{sid}.css missing hex {hx} ({entry['role']})")
+    print(f"  ✓ {sid}.css matches data.json palette")
+if styles:
+    extra_css = {p.stem for p in css_dir.glob("*.css")} - {s["id"] for s in styles}
+    if extra_css:
+        fail(f"CSS files without matching style in data.json: {extra_css}")
+
+# ── 9. .gitignore ─────────────────────────────────────────────────────────────
+
+print("\n9. .gitignore coverage:")
 gi_path = ROOT / ".gitignore"
 gi = gi_path.read_text() if gi_path.exists() else ""
 for f in [".DS_Store", "*.pyc", "__pycache__"]:
