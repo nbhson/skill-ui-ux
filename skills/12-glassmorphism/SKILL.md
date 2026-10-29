@@ -73,3 +73,84 @@ Glassmorphism is a style based on frosted glass panels: elements use semi-transp
 - **Nested glass panels:** stacking glass inside glass (panel within panel) doubles blur cost and muddies contrast — keep one glass layer per visual region.
 - **Failing contrast:** transparency + blur reduces contrast; light gray or dark text on glass commonly fails WCAG AA (4.5:1) — always verify text contrast over the busiest background area.
 - **Over-blurring everything:** applying `backdrop-filter: blur(40px+)` across many elements is GPU-expensive and causes jank on mobile — limit blur radius (10–30px) and the number of glass surfaces per screen.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on gradient start: `#FFFFFF` on `#667EEA` | 3.66:1 | ❌ FAIL |
+| body text on gradient end: `#FFFFFF` on `#764BA2` | 6.37:1 | ✅ pass |
+
+**White on the lighter gradient end `#667EEA` FAILS AA at 3.66:1** — and a `rgba(255,255,255,0.15)` glass fill lowers it further. Mitigate in order of preference: (1) keep text over the darker `#764BA2` end (6.37:1), (2) raise glass fill opacity to 0.30–0.40 behind text, (3) add a soft dark text-shadow. Always verify contrast over the busiest background region, not the average. Glassmorphism must also provide a solid fallback under `prefers-reduced-transparency: reduce`.
+
+## 9. Code Examples
+
+### Example 1 — Glass card over gradient
+
+Tokens: `assets/css/glassmorphism.css`
+
+```html
+<section class="scene">
+  <div class="blob blob--a" aria-hidden="true"></div>
+  <div class="blob blob--b" aria-hidden="true"></div>
+  <div class="glass-card">
+    <h1>Frosted panels</h1>
+    <p>Semi-transparent fill, backdrop blur, 1px light border.</p>
+    <button class="glass-btn">Continue</button>
+  </div>
+</section>
+<style>
+.scene { position: relative; display: grid; place-items: center; min-height: 480px; overflow: hidden;
+         background: linear-gradient(135deg, var(--color-background-gradient-1), var(--color-background-gradient-2)); /* #667EEA → #764BA2 */
+         font-family: var(--font-body); }
+.blob { position: absolute; border-radius: 50%; filter: blur(40px); }
+.blob--a { width: 300px; height: 300px; background: rgba(255, 255, 255, 0.25); top: 12%; left: 18%; }
+.blob--b { width: 220px; height: 220px; background: var(--color-background-gradient-2); bottom: 10%; right: 14%; }
+.glass-card { position: relative; max-width: 420px; padding: 32px; border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);                 /* glass fill */
+  backdrop-filter: blur(20px) saturate(180%);            /* mandatory blur */
+  border: 1px solid rgba(255, 255, 255, 0.3);            /* glass edge */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  color: var(--color-primary-text); text-shadow: 0 1px 2px rgba(0,0,0,0.25); }
+.glass-card h1 { font-family: var(--font-heading); font-size: 40px; font-weight: 600; margin: 0 0 8px; }
+.glass-btn { margin-top: 16px; padding: 12px 24px; border: 1px solid rgba(255,255,255,0.5);
+             border-radius: 12px; background: rgba(255,255,255,0.25); color: #FFFFFF;
+             font-weight: 600; }
+.glass-btn:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 3px; }
+@supports not (backdrop-filter: blur(20px)) {
+  .glass-card { background: rgba(45, 43, 90, 0.92); } /* solid fallback keeps contrast */
+}
+@media (prefers-reduced-transparency: reduce) {
+  .glass-card, .glass-btn { background: #2D2B5A; backdrop-filter: none; }
+}
+</style>
+```
+
+### Example 2 — Secondary glass panel
+
+Tokens: `assets/css/glassmorphism.css`
+
+```html
+<aside class="glass-sub">
+  <p>15% fill — secondary layer, no text heavier than labels.</p>
+</aside>
+<style>
+.glass-sub { padding: 16px 24px; border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);              /* lower transparency level = hierarchy */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-secondary-text); } /* 60–75% white — labels only, ≥ 14px */
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Contrast verified over the busiest background region — white on `#667EEA` fails (3.66:1): use the darker `#764BA2` end (6.37:1), higher fill opacity, or a text-shadow.
+- [ ] Exactly one glass layer per visual region — no glass inside glass.
+- [ ] `backdrop-filter: blur(10–30px)`; blur above 30px is a performance and legibility bug.
+- [ ] 1px light border (`rgba(255,255,255,0.3–0.6)`) on every glass panel.
+- [ ] A vibrant background (gradient/image/bokeh) sits behind every glass panel.
+- [ ] Solid fallback under `@supports not (backdrop-filter…)` and `prefers-reduced-transparency: reduce`.
+- [ ] Hierarchy expressed through 2–3 transparency levels, not added borders.

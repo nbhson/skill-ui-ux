@@ -20,3 +20,6 @@
   --font-body: "Inter; Label/decoration: DM Mono", sans-serif; /* Inter; Label/decoration: DM Mono (or Anybody) 12-14px / 500, wide letter-spacing */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on soft background: #1A1024 on #FFF1F2 = 16.72:1 — PASS */
+/* accent text on soft background: #7C3AED on #FFF1F2 = 5.19:1 — PASS */

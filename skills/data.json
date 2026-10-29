@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "1.1",
     "language": "en",
     "totalStyles": 12
   },
@@ -108,7 +108,26 @@
           "Unintentional imbalance: excessive whitespace can make layouts feel disconnected, while too little creates visual crowding—white space must serve a purpose, not merely exist",
           "No hierarchy: without typography or color to establish focal points, users cannot discern what matters most on the screen",
           "Grayscale for the wrong reasons: avoiding color entirely when a single accent would improve navigation and user experience is a missed opportunity, not a virtue"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#111111",
+              "background": "#FFFFFF",
+              "role": "body text on primary background",
+              "ratio": 18.88,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#6B7280",
+              "background": "#FFFFFF",
+              "role": "muted/secondary text on primary background",
+              "ratio": 4.83,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "All pairs pass WCAG AA (>= 4.5:1). Do not lighten #6B7280 further for small text."
+        }
       },
       "relatedStyles": [
         "flat-design",
@@ -212,7 +231,26 @@
           "No breathing room: packing every pixel with content exhausts users; even in maximalism, visual rhythm requires zones of lower density",
           "Random decoration: using patterns, stickers, or textures that have no relation to the brand message undermines the intentionality that makes maximalism compelling",
           "Everything competing for attention: when every element is bold, colorful, and large, nothing stands out—the principle of \"dominant color\" (occupying 40-50% of area) is often ignored"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#1A1024",
+              "background": "#FFF1F2",
+              "role": "body text on soft background",
+              "ratio": 16.72,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#7C3AED",
+              "background": "#FFF1F2",
+              "role": "accent text on soft background",
+              "ratio": 5.19,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "Body and accent pairs pass WCAG AA on the light soft background. Neon pink (#FF3EA5) and cyan (#22D3EE) on #FFF1F2 are decoration only — never body text."
+        }
       },
       "relatedStyles": [
         "brutalism-ui",
@@ -322,7 +360,26 @@
           "Low contrast combinations: pairing colors with insufficient contrast (e.g., light gray text on white) violates flat design's core emphasis on clarity and legibility",
           "Insufficient typography weight: using thin, light fonts at small sizes leaves text unreadable because the lack of shadow-based depth was not compensated for through type treatment",
           "Over-flattening everything: applying flat styling uniformly to all contexts, including complex charts or data visualizations, loses the nuance needed for information hierarchy"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#1E293B",
+              "background": "#F8FAFC",
+              "role": "body text on primary background",
+              "ratio": 13.98,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#64748B",
+              "background": "#F8FAFC",
+              "role": "secondary text on primary background",
+              "ratio": 4.55,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "All pairs pass WCAG AA. #64748B sits at 4.55:1 — use it only at >= 15px; for small labels darken to #475569."
+        }
       },
       "relatedStyles": [
         "minimalism",
@@ -434,7 +491,26 @@
           "Inconsistent shadow values: applying different blur, spread, or opacity values across buttons and cards breaks the unified soft-material illusion that defines neumorphism",
           "Low-contrast text: pairing gray-on-gray elements with soft shadows results in text that fails accessibility standards—the neumorphic aesthetic requires deliberate contrast planning",
           "Static interfaces: neumorphism relies on shadow transitions to communicate pressed/raised states; without clear interaction feedback, the tactile quality that distinguishes this style is lost"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#4A5568",
+              "background": "#ECF0F3",
+              "role": "body text on element background",
+              "ratio": 6.57,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#4A5568",
+              "background": "#E4E9F2",
+              "role": "body text on primary background",
+              "ratio": 6.18,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "All pairs pass WCAG AA, but gray-on-gray leaves little headroom: never use lighter grays for text, and keep text off the shadowed edges of elements."
+        }
       },
       "relatedStyles": [
         "claymorphism",
@@ -551,7 +627,26 @@
           "Uniform rounding everywhere: applying 50%+ border-radius to every single element turns the interface into a blob—vary the rounding to maintain visual hierarchy and interest",
           "Lone elements without overlap: clay blocks that float in isolation miss the tactile, connected quality of the style; subtle overlaps between blocks reinforce the \"molded clay\" feel",
           "Overloaded color palette: using too many saturated colors across multiple clay blocks fragments the cohesive effect—limit to 2-3 prominent color families for harmony"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#1A1A2E",
+              "background": "#E8EEF5",
+              "role": "recommended body text on primary background",
+              "ratio": 14.6,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#4A5568",
+              "background": "#E8EEF5",
+              "role": "recommended muted text on primary background",
+              "ratio": 6.44,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "The original palette defines no text color. The two text hexes above are RECOMMENDED values (not part of the original palette) that pass WCAG AA. Do not place white text on the mint (#34D399) or pink (#F472B6) clay blocks for small text."
+        }
       },
       "relatedStyles": [
         "neumorphism",
@@ -664,7 +759,26 @@
           "Sharp photographs on soft gradients: placing detailed images or videos directly over aurora backgrounds creates visual conflict; always use a glass intermediary layer",
           "Dark text on bright aurora: dark text on vibrant gradient backgrounds is difficult to read—white text with soft shadow is non-negotiable for accessibility",
           "Over-blurring: applying excessive bokeh blur (80px+) everywhere creates an unfocused, inaccessible interface; blur should enhance depth, not obscure content"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#FFFFFF",
+              "background": "#0F0C29",
+              "role": "body text on darkest background layer",
+              "ratio": 19.01,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#FFFFFF",
+              "background": "#302B63",
+              "role": "body text on mid background layer",
+              "ratio": 12.72,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "White on the deep background layers passes WCAG AA. Text over the bright light layers (#6366F1 / #06B6D4) is NOT verified — always keep text over the darkest zones or on a glass panel."
+        }
       },
       "relatedStyles": [
         "claymorphism",
@@ -774,7 +888,26 @@
           "Usability sacrificed for shock value: using tiny click targets, illegible type, or poor contrast under the guise of brutalism damages user experience without artistic justification",
           "Half-hearted boldness: mixing bold brutalist elements with polished, refined ones creates indecision rather than tension—a committed brutalist approach is more effective",
           "Random interactivity: adding marquees or scroll effects without purpose feels gimmicky; every \"raw\" element should have intentional function alongside its aesthetic"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#000000",
+              "background": "#FFFEF0",
+              "role": "body text on primary background",
+              "ratio": 20.69,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#000000",
+              "background": "#FFE600",
+              "role": "body text on yellow accent block",
+              "ratio": 16.57,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "All black-on-bright pairs pass WCAG AA. White text on #FF5C00 or #FF00FF fails AA for small text — invert to black text or use these accents for decoration only."
+        }
       },
       "relatedStyles": [
         "maximalism",
@@ -880,7 +1013,26 @@
           "Random visual assembly: combining disparate images, fonts, and colors without a unifying theme or dominant color creates noise rather than a cohesive collage",
           "Static composition: without rotation, scaling, or overlapping elements, the collage reads as a standard grid layout—motion and asymmetry are essential to the style",
           "Uniform palette: using the same color for all layers eliminates the visual depth that comes from contrasting warm and cool tones against textured backgrounds"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#1E293B",
+              "background": "#F5F0E8",
+              "role": "body text on textured background",
+              "ratio": 12.9,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#FFFFFF",
+              "background": "#C026D3",
+              "role": "text overlay on magenta layer",
+              "ratio": 4.71,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "Both core pairs pass WCAG AA, but the magenta pair has almost no headroom: any image/texture behind white text on #C026D3 will drop it below 4.5:1 — put text on solid fills."
+        }
       },
       "relatedStyles": [
         "maximalism",
@@ -995,7 +1147,26 @@
           "Mismatched metaphors: applying skeuomorphic styling to contexts where the physical metaphor doesn't fit (e.g., a banking app designed as a leather notebook) creates confusion rather than familiarity",
           "Texture over readability: heavy material patterns behind text or icons diminish legibility—the real-world metaphor should enhance, not obstruct, usability",
           "Stuck in 2010: continuing to use heavy skeuomorphism (deep gradients, prominent bevels) when modern design has moved toward subtlety makes the interface appear dated rather than nostalgic"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#FFFFFF",
+              "background": "#8B5A2B",
+              "role": "body text on brown leather background",
+              "ratio": 5.84,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#FFFFFF",
+              "background": "#3D3D3D",
+              "role": "text on black leather",
+              "ratio": 10.86,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "White-on-leather passes WCAG AA at 18px+ and passes AA-large only for smaller/italic text. Avoid dark text on leather (#3D3D3D text on #8B5A2B is ~2.9:1, fail) — engraved/dark text is decoration, not for body copy."
+        }
       },
       "relatedStyles": [
         "retro"
@@ -1145,7 +1316,26 @@
           "Style over usability: using tiny pixel fonts, excessive scanlines, or low-contrast retro colors that impair readability sacrifices function for form",
           "Surface nostalgia: merely applying scanlines and halftones without understanding the genuine spirit of the era produces inauthentic, superficial retro that feels like costume rather than design",
           "Uniform treatment: applying retro styling to every element equally (header, body, buttons, inputs) flattens the hierarchy—retro treatment should emphasize focal points while modern principles guide functional elements"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#FFFFFF",
+              "background": "#0D0221",
+              "role": "synthwave body text on dark background",
+              "ratio": 20.04,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#FFFFFF",
+              "background": "#663399",
+              "role": "Y2K text on deep purple",
+              "ratio": 8.41,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "Dark-era pairs pass WCAG AA. The 50s diner palette is the risk zone: #FF2D2D cherry red on cream #F7E7CE is below 4.5:1 — use cherry red for large display text only, or darken to #B91C1C for body-size text (5.32:1, passes AA)."
+        }
       },
       "relatedStyles": [
         "brutalism-ui",
@@ -1264,7 +1454,26 @@
           "Forced symmetry: applying symmetrical layouts to inherently asymmetrical content (like social feeds or news streams) creates awkward, unnatural arrangements—symmetry serves composition, not the reverse",
           "Cool-glass-on-warm-classic: adding glassmorphism panels with cold blue tints over warm champagne and navy backgrounds creates a jarring contrast that undermines the contemplative palette",
           "Modern-bold mixing: pairing heavy modern sans-serif fonts (Arial Black, Helvetica Bold) with delicate serif typography creates visual discord—class morphism demands refined, medium-weight fonts throughout"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#1A1A1A",
+              "background": "#F5F0EB",
+              "role": "body text on primary background",
+              "ratio": 15.37,
+              "wcagAA": "pass"
+            },
+            {
+              "foreground": "#6B5B4F",
+              "background": "#F5F0EB",
+              "role": "secondary text on primary background",
+              "ratio": 5.73,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "All pairs pass WCAG AA. Champagne gold #C9A96E on the off-white background is ~2.1:1 — decorative accents only, never text."
+        }
       },
       "relatedStyles": [
         "aurora-ui",
@@ -1384,7 +1593,26 @@
           "Nested glass panels: stacking glass inside glass (panel within panel) doubles blur cost and muddies contrast — keep one glass layer per visual region",
           "Failing contrast: transparency + blur reduces contrast; light gray or dark text on glass commonly fails WCAG AA (4.5:1) — always verify text contrast over the busiest background area",
           "Over-blurring everything: applying `backdrop-filter: blur(40px+)` across many elements is GPU-expensive and causes jank on mobile — limit blur radius (10–30px) and the number of glass surfaces per screen"
-        ]
+        ],
+        "contrast": {
+          "pairs": [
+            {
+              "foreground": "#FFFFFF",
+              "background": "#667EEA",
+              "role": "body text on gradient start",
+              "ratio": 3.66,
+              "wcagAA": "fail"
+            },
+            {
+              "foreground": "#FFFFFF",
+              "background": "#764BA2",
+              "role": "body text on gradient end",
+              "ratio": 6.37,
+              "wcagAA": "pass"
+            }
+          ],
+          "notes": "WARNING: white text directly on the lighter gradient end (#667EEA) FAILS the 4.5:1 WCAG AA body-text threshold (3.66:1) — and the rgba(255,255,255,0.15) glass fill lowers it further. Mitigations (in order of preference): (1) keep text over the darker #764BA2 end of the gradient, (2) raise glass fill opacity to 0.30-0.40 behind text, (3) add a soft dark text-shadow. Verify contrast over the BUSIEST background region, not the average."
+        }
       },
       "relatedStyles": [
         "aurora-ui",

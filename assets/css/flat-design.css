@@ -21,3 +21,6 @@
   --font-body: "Open Sans", sans-serif; /* Open Sans (or Roboto); UI Label: Open Sans / Nunito Sans 13-14px / 600, uppercase for status labels */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on primary background: #1E293B on #F8FAFC = 13.98:1 — PASS */
+/* secondary text on primary background: #64748B on #F8FAFC = 4.55:1 — PASS */

@@ -68,3 +68,68 @@ A single font family (e.g., Open Sans) for both headers and body maintains overa
 - **Low contrast combinations:** pairing colors with insufficient contrast (e.g., light gray text on white) violates flat design's core emphasis on clarity and legibility.
 - **Insufficient typography weight:** using thin, light fonts at small sizes leaves text unreadable because the lack of shadow-based depth was not compensated for through type treatment.
 - **Over-flattening everything:** applying flat styling uniformly to all contexts, including complex charts or data visualizations, loses the nuance needed for information hierarchy.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on primary background: `#1E293B` on `#F8FAFC` | 13.98:1 | ✅ pass |
+| secondary text on primary background: `#64748B` on `#F8FAFC` | 4.55:1 | ✅ pass |
+
+Both core pairs pass AA. The secondary gray `#64748B` sits at only 4.55:1 — use it at 15px or larger; for small labels darken to `#475569` (7.24:1). White text on the blue block `#3B82F6` is the standard CTA pairing — keep block colors out of body-text roles. Because flat UI has no shadows, hover/pressed/focus states must be communicated with color or border changes alone.
+
+## 9. Code Examples
+
+### Example 1 — Flat stat card + primary button
+
+Tokens: `assets/css/flat-design.css`
+
+```html
+<div class="card">
+  <div class="icon" aria-hidden="true">▲</div>
+  <h3>Uptime</h3>
+  <p class="value">99.98%</p>
+  <button class="btn">View report</button>
+</div>
+<style>
+.card {
+  width: 240px; padding: 24px; border-radius: 8px; /* uniform radius */
+  background: var(--color-primary-background);     /* #F8FAFC */
+  font-family: var(--font-body); color: var(--color-primary-text); /* #1E293B */
+  border: 1px solid #E2E8F0;
+}
+.icon { width: 40px; height: 24px; background: var(--color-block-background); /* #3B82F6 */
+        clip-path: polygon(0 100%, 25% 40%, 55% 75%, 100% 0); }
+.btn { margin-top: 16px; padding: 8px 16px; border: 0; border-radius: 8px;
+       background: var(--color-block-background); color: #FFFFFF;
+       font-family: var(--font-body); font-weight: 600; }
+.btn:hover { background: #2563EB; }
+.btn:focus-visible { outline: 3px solid var(--color-danger); outline-offset: 2px; }
+</style>
+```
+
+### Example 2 — Flat status label
+
+Tokens: `assets/css/flat-design.css`
+
+```html
+<span class="tag tag--ok">Operational</span>
+<style>
+.tag { font-family: var(--font-body); font-size: 13px; font-weight: 600;
+       text-transform: uppercase; letter-spacing: 0.04em;
+       padding: 4px 8px; border-radius: 4px; }
+.tag--ok { background: var(--color-accent-1); color: #FFFFFF; } /* #10B981 */
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Body text ≥ 4.5:1 — `#1E293B` on `#F8FAFC` (13.98:1); use `#64748B` (4.55:1) only at ≥ 15px, or darken to `#475569` (7.24:1) for small labels.
+- [ ] Only solid colors; any gradient shifts ≤ 15% lightness.
+- [ ] No more than 5 palette colors per screen (background, block, 2 accents, danger).
+- [ ] All layout aligned to an 8pt (or 4pt) grid with consistent spacing.
+- [ ] Border-radius 4–12px, uniform across buttons, cards, and inputs.
+- [ ] Hover / pressed / focus states communicated by color or border — never by shadow alone.
+- [ ] Icons are single-color glyphs at 20–24px with 1.5–2px strokes.

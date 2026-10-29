@@ -1,6 +1,6 @@
 # 🎨 Professional UI/UX Skill Set — 12 Design Styles
 
-A professional reference guide for 12 UI/UX design styles, each with full coverage of: definition, design principles, color palette (hex), typography, visual elements, real-world applications, combination notes, and anti-patterns.
+A professional reference guide for 12 UI/UX design styles, each with full coverage of: definition, design principles, color palette (hex), typography, visual elements, real-world applications, combination notes, anti-patterns, accessibility notes (WCAG contrast), code examples, and an implementation checklist.
 
 ## 📂 Skill List
 
@@ -21,7 +21,7 @@ A professional reference guide for 12 UI/UX design styles, each with full covera
 
 ## 🤖 Machine-Readable Data / AI Agents
 
-[`data.json`](./skills/data.json) — the full skill set as structured JSON (definitions, principles, palettes, typography, combinations, anti-patterns, tags). The root [`SKILL.md`](./SKILL.md) also serves as a router for AI agents to identify the right style and drill into the appropriate guide.
+[`data.json`](./skills/data.json) — the full skill set as structured JSON (definitions, principles, palettes, typography, combinations, anti-patterns, precomputed WCAG contrast pairs, tags). The root [`SKILL.md`](./SKILL.md) also serves as a router for AI agents to identify the right style and drill into the appropriate guide.
 
 ```json
 {
@@ -43,12 +43,12 @@ A professional reference guide for 12 UI/UX design styles, each with full covera
 ## 🎯 How to Use
 
 1. **Select a style:** use the summary table to choose the skill that fits your product/brand.
-2. **Read SKILL.md:** each file follows 8 standard sections (definition → principles → colors → font → visual → applications → combinations → anti-patterns).
+2. **Read SKILL.md:** each file follows 10 standard sections (definition → principles → colors → font → visual → applications → combinations → anti-patterns → code examples → implementation checklist).
 3. **Apply:** use the hex palette + font pair + visual rules as standards when designing. For AI agents: use the root `SKILL.md` router to select a style, then the appropriate `SKILL.md` guide for detailed implementation.
 
 ## 🤖 AI Agent Usage
 
-The root [`SKILL.md`](./SKILL.md) acts as a skill router — it describes all 12 styles, their ideal use cases, and links to individual guides. Load it when the task involves UI/UX design, style selection, or design review. Each style's `SKILL.md` file follows an 8-section standard.
+The root [`SKILL.md`](./SKILL.md) acts as a skill router — it describes all 12 styles, their ideal use cases, and links to individual guides. Load it when the task involves UI/UX design, style selection, or design review. Each style's `SKILL.md` file follows a 10-section standard, including accessibility notes with precomputed WCAG contrast pairs (available in `data.json` under `sections.contrast`).
 
 ## 🔄 Quick Combination Matrix
 

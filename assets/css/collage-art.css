@@ -20,3 +20,6 @@
   --font-body: "DM Sans", sans-serif; /* DM Sans (or Libre Baskerville) */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on textured background: #1E293B on #F5F0E8 = 12.9:1 — PASS */
+/* text overlay on magenta layer: #FFFFFF on #C026D3 = 4.71:1 — PASS */

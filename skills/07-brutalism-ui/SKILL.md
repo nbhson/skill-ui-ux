@@ -71,3 +71,74 @@ Monospace fonts (Courier New, Space Mono) are the most popular choice in brutali
 - **Usability sacrificed for shock value:** using tiny click targets, illegible type, or poor contrast under the guise of brutalism damages user experience without artistic justification.
 - **Half-hearted boldness:** mixing bold brutalist elements with polished, refined ones creates indecision rather than tension—a committed brutalist approach is more effective.
 - **Random interactivity:** adding marquees or scroll effects without purpose feels gimmicky; every "raw" element should have intentional function alongside its aesthetic.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on primary background: `#000000` on `#FFFEF0` | 20.69:1 | ✅ pass |
+| body text on yellow accent block: `#000000` on `#FFE600` | 16.57:1 | ✅ pass |
+
+Black text on the off-white and yellow blocks is extremely safe (20.69:1 and 16.57:1). The failure mode is white text on the orange `#FF5C00` (3.1:1) or magenta `#FF00FF` — invert to black text or reserve those accents for decoration. Marquees and scroll effects must stop under `prefers-reduced-motion: reduce`, and 'raw' styling never excuses missing focus indicators: keep the browser-default focus ring or a chunky custom one.
+
+## 9. Code Examples
+
+### Example 1 — Brutalist heading + raw nav
+
+Tokens: `assets/css/brutalism-ui.css`
+
+```html
+<header class="raw">
+  <h1>DESIGN
+    IS BROKEN*</h1>
+  <p>*on purpose</p>
+  <nav aria-label="Main">
+    <a href="#work">WORK</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+<style>
+header { padding: 24px; background: var(--color-primary-background); /* #FFFEF0 */
+         color: var(--color-text); font-family: "Courier New", monospace; }
+h1 { font-family: var(--font-heading); font-size: clamp(48px, 12vw, 120px);
+     font-weight: 900; text-transform: uppercase; line-height: 0.9; margin: 0; }
+nav { display: flex; gap: 16px; margin-top: 24px; }
+nav a { color: var(--color-text); font-weight: 700; text-decoration: none;
+        border: 3px solid #000; padding: 8px 16px;
+        box-shadow: 4px 4px 0 #000; background: var(--color-accent-1); } /* #FFE600 */
+nav a:hover { background: var(--color-text); color: var(--color-primary-background); }
+nav a:focus-visible { outline: 4px solid var(--color-accent-2); outline-offset: 2px; }
+</style>
+```
+
+### Example 2 — Hard-shadow card
+
+Tokens: `assets/css/brutalism-ui.css`
+
+```html
+<article class="card">
+  <h2>Post 001</h2>
+  <p>Raw content, thick borders, no apologies.</p>
+  <a class="more" href="#001">READ →</a>
+</article>
+<style>
+.card { max-width: 360px; padding: 24px; background: var(--color-accent-1); /* #FFE600 */
+        border: 4px solid #000; box-shadow: 8px 8px 0 #000;
+        font-family: var(--font-body); color: var(--color-text); }
+h2 { font-family: var(--font-heading); font-size: 40px; margin: 0 0 8px; text-transform: uppercase; }
+.more { text-decoration: underline 3px; font-weight: 700; color: var(--color-text); }
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Black text on bright blocks (`#000` on `#FFFEF0` 20.69:1, on `#FFE600` 16.57:1); never white text on `#FF5C00`/`#FF00FF` (3.1:1) for body copy.
+- [ ] 2–4px black borders on all major blocks.
+- [ ] Shadows are hard offsets only (`4px 4px 0 #000`) — never soft.
+- [ ] Hover states are unmistakable (color inversion or full background swap).
+- [ ] Deliberate disorder keeps a hidden logic — the layout is never actually random.
+- [ ] Marquee/scroll effects pause under `prefers-reduced-motion: reduce`.
+- [ ] Interactive targets ≥ 44×44px with a visible focus indicator despite the raw aesthetic.

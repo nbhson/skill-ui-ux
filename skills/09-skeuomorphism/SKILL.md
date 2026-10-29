@@ -70,3 +70,73 @@ Serif fonts (Georgia, Palatino) or "soft" sans-serif (Trebuchet) fit the realist
 - **Mismatched metaphors:** applying skeuomorphic styling to contexts where the physical metaphor doesn't fit (e.g., a banking app designed as a leather notebook) creates confusion rather than familiarity.
 - **Texture over readability:** heavy material patterns behind text or icons diminish legibility—the real-world metaphor should enhance, not obstruct, usability.
 - **Stuck in 2010:** continuing to use heavy skeuomorphism (deep gradients, prominent bevels) when modern design has moved toward subtlety makes the interface appear dated rather than nostalgic.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on brown leather background: `#FFFFFF` on `#8B5A2B` | 5.84:1 | ✅ pass |
+| text on black leather: `#FFFFFF` on `#3D3D3D` | 10.86:1 | ✅ pass |
+
+White text on the brown leather passes AA (5.84:1) but only has ~1.3 headroom — keep leather backgrounds darkened and untextured behind copy. Dark text on leather fails hard (`#3D3D3D` on `#8B5A2B` is 1.86:1): engraved/dark text is decoration only. LCD-style displays should use near-black numerals on a pale green/gray LCD for maximum legibility.
+
+## 9. Code Examples
+
+### Example 1 — Skeuomorphic music player panel
+
+Tokens: `assets/css/skeuomorphism.css`
+
+```html
+<section class="music-player">
+  <div class="lcd">02:47</div>
+  <div class="controls">
+    <button class="btn" aria-label="Previous">&#9664;</button>
+    <button class="btn btn--main" aria-label="Play">&#9654;</button>
+    <button class="btn" aria-label="Next">&#9654;</button>
+  </div>
+</section>
+<style>
+.music-player {
+  width: 320px; padding: 24px; border-radius: 16px; text-align: center;
+  background: var(--color-brown-leather-background) url(leather.png); /* #8B5A2B */
+  font-family: var(--font-body); color: #FFFFFF;  /* 5.84:1 on leather */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.30),  /* top highlight = raised */
+              0 6px 12px rgba(0,0,0,0.40);           /* drop shadow */
+}
+.lcd { font-family: "Digital-7 Mono", monospace; font-size: 40px;
+       background: #1A1A1A; color: #9EFF9E; padding: 8px 16px; border-radius: 8px;
+       box-shadow: inset 0 2px 8px rgba(0,0,0,0.8); margin-bottom: 16px; }
+.btn { width: 56px; height: 40px; border: 0; cursor: pointer;
+       background: linear-gradient(180deg, var(--color-silver-metal), #E8E8E8); /* metal bevel */
+       border-radius: 6px;
+       box-shadow: inset 0 2px 0 #FFFFFFCC, inset 0 -3px 6px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.5); }
+.btn:active { box-shadow: inset 0 3px 6px rgba(0,0,0,0.45); } /* pressed-in */
+.btn:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 3px; }
+</style>
+```
+
+### Example 2 — Bevelled knob
+
+Tokens: `assets/css/skeuomorphism.css`
+
+```html
+<button class="knob" aria-label="Volume"></button>
+<style>
+.knob { width: 72px; height: 72px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #E8E8E8, var(--color-silver-metal) 70%);
+        box-shadow: inset 0 2px 2px rgba(255,255,255,0.9), inset 0 -4px 8px rgba(0,0,0,0.35),
+                    0 4px 8px rgba(0,0,0,0.4); }
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Text on leather is white or near-white (5.84:1 on `#8B5A2B`); dark text on leather (`#3D3D3D` on `#8B5A2B`, 1.86:1) is decoration only.
+- [ ] Material textures are used selectively — never behind body text without a solid/darkened plate.
+- [ ] Bevels read correctly: light on top = raised, dark on top = pressed.
+- [ ] Every physical control has an obvious pressed state (inner shadow + gradient flip).
+- [ ] Multi-layer shadows (drop + inner + top highlight) use consistent values across components.
+- [ ] Serif or soft sans-serif type (`Georgia`, `Trebuchet MS`) at ≥ 15px over busy textures.
+- [ ] Focus states are explicit — engraved/tactile looks must not swallow the focus ring.

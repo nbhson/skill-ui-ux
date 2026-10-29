@@ -21,3 +21,6 @@
   --font-body: "SF Pro Rounded; Label: SF Pro Rounded 12-14px / 500", sans-serif; /* SF Pro Rounded; Label: SF Pro Rounded 12-14px / 500 */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* recommended body text on primary background: #1A1A2E on #E8EEF5 = 14.6:1 — PASS */
+/* recommended muted text on primary background: #4A5568 on #E8EEF5 = 6.44:1 — PASS */

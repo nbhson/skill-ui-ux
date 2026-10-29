@@ -21,3 +21,6 @@
   --font-body: "SF Pro Text", sans-serif; /* SF Pro Text (or Inter); Label: SF Pro Text 12-14px / 500, letter-spacing 0.05em */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on darkest background layer: #FFFFFF on #0F0C29 = 19.01:1 — PASS */
+/* body text on mid background layer: #FFFFFF on #302B63 = 12.72:1 — PASS */

@@ -21,3 +21,6 @@
   --font-body: "Poppins; UI Label: Poppins 13-14px / 500", sans-serif; /* Poppins; UI Label: Poppins 13-14px / 500 */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on element background: #4A5568 on #ECF0F3 = 6.57:1 — PASS */
+/* body text on primary background: #4A5568 on #E4E9F2 = 6.18:1 — PASS */

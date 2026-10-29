@@ -21,3 +21,7 @@
   --font-body: "Inter", sans-serif; /* Inter (or SF Pro Text); Label: Inter 12-14px / 500, letter-spacing 0.05em */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on gradient start: #FFFFFF on #667EEA = 3.66:1 — FAIL */
+/* body text on gradient end: #FFFFFF on #764BA2 = 6.37:1 — PASS */
+/* WARNING: at least one pair fails AA — see data.json `contrast.notes` for mitigations. */

@@ -20,3 +20,6 @@
   --font-body: "Courier New", sans-serif; /* Courier New (or Space Mono, Roboto Mono); UI Label: Arial (or Helvetica) 14-16px / 700 */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on primary background: #000000 on #FFFEF0 = 20.69:1 — PASS */
+/* body text on yellow accent block: #000000 on #FFE600 = 16.57:1 — PASS */

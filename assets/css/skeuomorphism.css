@@ -21,3 +21,6 @@
   --font-body: "Trebuchet MS", sans-serif; /* Trebuchet MS (or Verdana); Digital display: Digital-7 Mono (or LCD mono) 24-48px */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on brown leather background: #FFFFFF on #8B5A2B = 5.84:1 — PASS */
+/* text on black leather: #FFFFFF on #3D3D3D = 10.86:1 — PASS */

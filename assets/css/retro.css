@@ -29,3 +29,6 @@
   --font-body: "1950s: Open Sans / Lato; 1970s: Roboto Slab / Merriweather; 1980s: VT323 / Share Tech Mono; 1990s: Verdana / Trebuchet MS", sans-serif; /* 1950s: Open Sans / Lato; 1970s: Roboto Slab / Merriweather; 1980s: VT323 / Share Tech Mono; 1990s: Verdana / Trebuchet MS */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* synthwave body text on dark background: #FFFFFF on #0D0221 = 20.04:1 — PASS */
+/* Y2K text on deep purple: #FFFFFF on #663399 = 8.41:1 — PASS */

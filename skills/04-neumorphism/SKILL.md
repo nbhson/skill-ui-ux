@@ -70,3 +70,73 @@ Rounded fonts like Poppins, Nunito, and Quicksand are the best fit for the soft,
 - **Inconsistent shadow values:** applying different blur, spread, or opacity values across buttons and cards breaks the unified soft-material illusion that defines neumorphism.
 - **Low-contrast text:** pairing gray-on-gray elements with soft shadows results in text that fails accessibility standards—the neumorphic aesthetic requires deliberate contrast planning.
 - **Static interfaces:** neumorphism relies on shadow transitions to communicate pressed/raised states; without clear interaction feedback, the tactile quality that distinguishes this style is lost.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on element background: `#4A5568` on `#ECF0F3` | 6.57:1 | ✅ pass |
+| body text on primary background: `#4A5568` on `#E4E9F2` | 6.18:1 | ✅ pass |
+
+Gray-on-gray is the style's inherent accessibility risk: both verified pairs pass (6.57:1 and 6.18:1) but with limited headroom, so never use lighter grays for text and keep text off shadowed edges. Because boundaries are created by shadow alone, shadows **cannot replace a visible focus indicator** — always add a real `:focus-visible` ring on interactive elements. Also respect `prefers-contrast: more` by falling back to a bordered, higher-contrast variant.
+
+## 9. Code Examples
+
+### Example 1 — Neumorphic toggle card with pressed state
+
+Tokens: `assets/css/neumorphism.css`
+
+```html
+<div class="panel">
+  <p>Ambient mode</p>
+  <button class="toggle" role="switch" aria-checked="true"><span class="knob"></span></button>
+</div>
+<style>
+.panel {
+  width: 280px; padding: 32px; border-radius: 24px;
+  background: var(--color-primary-background-light); /* #E4E9F2 */
+  font-family: var(--font-body); color: var(--color-primary-text); /* #4A5568 */
+}
+/* the core technique: two symmetric soft shadows */
+.panel { box-shadow: -8px -8px 16px #FFFFFF, 8px 8px 16px #A3B1C6; }
+.toggle {
+  width: 64px; height: 32px; border: 0; border-radius: 16px;
+  background: var(--color-primary-background-light);
+  box-shadow: inset -4px -4px 8px #FFFFFF55, inset 4px 4px 8px #A3B1C650; /* pressed-in track */
+}
+.knob { display: block; width: 24px; height: 24px; border-radius: 50%;
+        background: var(--color-element-light); /* #ECF0F3 */
+        box-shadow: -2px -2px 4px #FFFFFF, 2px 2px 4px #A3B1C6;
+        transform: translateX(32px); transition: transform 150ms ease; }
+.toggle[aria-checked="false"] .knob { transform: translateX(8px); }
+.toggle:focus-visible { outline: 2px solid var(--color-accent-color); outline-offset: 4px; }
+</style>
+```
+
+### Example 2 — Raised tile
+
+Tokens: `assets/css/neumorphism.css`
+
+```html
+<div class="tile">72 BPM</div>
+<style>
+.tile {
+  display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%;
+  background: var(--color-element-light); color: var(--color-primary-text);
+  font-family: var(--font-body); font-weight: 600;
+  box-shadow: -6px -6px 12px #FFFFFF70, 6px 6px 12px #A3B1C660; /* light TL, dark BR */
+}
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Text uses `#4A5568` (6.57:1 on elements, 6.18:1 on background) — never lighter grays for text.
+- [ ] Background, buttons, and cards share one hue family with only ±10% lightness difference.
+- [ ] Every raised element uses the same dual-shadow values (same blur, spread, opacity).
+- [ ] All interactive elements have a pressed state via inset shadow, plus a `:focus-visible` ring that does not rely on shadow alone.
+- [ ] Border-radius 16–24px applied uniformly.
+- [ ] Layout on the 8pt grid; sliders/inputs use embedded (inset) styling.
+- [ ] Touch targets ≥ 44×44px despite the soft, low-contrast aesthetic.

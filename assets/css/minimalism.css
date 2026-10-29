@@ -22,3 +22,6 @@
   --font-body: "Inter", sans-serif; /* Inter (or SF Pro Text) */
 }
 
+/* Contrast (WCAG relative luminance, AA body-text threshold = 4.5:1) */
+/* body text on primary background: #111111 on #FFFFFF = 18.88:1 — PASS */
+/* muted/secondary text on primary background: #6B7280 on #FFFFFF = 4.83:1 — PASS */

@@ -68,3 +68,71 @@ Hierarchy is created primarily through **size and weight**, limiting font famili
 - **Unintentional imbalance:** excessive whitespace can make layouts feel disconnected, while too little creates visual crowding—white space must serve a purpose, not merely exist.
 - **No hierarchy:** without typography or color to establish focal points, users cannot discern what matters most on the screen.
 - **Grayscale for the wrong reasons:** avoiding color entirely when a single accent would improve navigation and user experience is a missed opportunity, not a virtue.
+
+### Accessibility Notes
+
+Contrast is computed per the WCAG relative-luminance formula (AA threshold 4.5:1 for body text); values are precomputed in `skills/data.json` → `sections.contrast`.
+
+| Pair | Ratio | WCAG AA (4.5:1) |
+|---|---|---|
+| body text on primary background: `#111111` on `#FFFFFF` | 18.88:1 | ✅ pass |
+| muted/secondary text on primary background: `#6B7280` on `#FFFFFF` | 4.83:1 | ✅ pass |
+
+Both core text pairs pass WCAG AA comfortably. The single accent `#2563EB` carrying white text measures 5.17:1, so it is safe for buttons and links. The main risk is **over-lightening** the secondary gray `#6B7280` (4.83:1 has almost no headroom) — keep it at this value or darker for text under 18px. No motion or transparency is intrinsic to the style, so no reduced-motion handling is required; do keep a visible `:focus-visible` outline, since minimal layouts remove most other affordances.
+
+## 9. Code Examples
+
+### Example 1 — Hero with a single focal point
+
+Tokens: `assets/css/minimalism.css`
+
+```html
+<section class="hero">
+  <h1>Ship less, mean more</h1>
+  <p>One focal point per screen. Everything else supports it.</p>
+  <a class="cta" href="/start">Start free</a>
+</section>
+<style>
+.hero {
+  max-width: 640px; margin: 0 auto; padding: 96px 32px; /* 8pt-grid multiples */
+  background: var(--color-primary-background); /* #FFFFFF */
+  color: var(--color-primary-text);            /* #111111 — 18.88:1 */
+  font-family: var(--font-body); text-align: center;
+}
+.hero h1 { font-family: var(--font-heading); font-size: 56px; font-weight: 700;
+           line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 16px; }
+.hero p  { font-size: 18px; line-height: 1.6; color: var(--color-secondary-text); /* #6B7280 — 4.83:1 */
+           margin: 0 0 32px; }
+.cta     { display: inline-block; background: var(--color-single-accent); /* #2563EB */
+           color: #FFFFFF; padding: 12px 24px; border-radius: 6px;
+           font-weight: 600; text-decoration: none; }
+.cta:focus-visible { outline: 2px solid var(--color-primary-text); outline-offset: 2px; }
+</style>
+```
+
+### Example 2 — Quiet data row
+
+Tokens: `assets/css/minimalism.css`
+
+```html
+<div class="row">
+  <span class="label">Monthly active users</span>
+  <strong class="value">48,210</strong>
+</div>
+<style>
+.row { display: flex; justify-content: space-between; align-items: baseline;
+       padding: 16px 0; border-bottom: 1px solid #EEEEEE; /* 1px divider, no shadow */
+       font-family: var(--font-body); max-width: 480px; }
+.value { font-size: 24px; font-weight: 600; color: var(--color-primary-text); }
+</style>
+```
+
+## 10. Implementation Checklist
+
+- [ ] Body text contrast ≥ 4.5:1 — `#111111` on `#FFFFFF` (18.88:1) and `#6B7280` (4.83:1); never lighten the secondary gray further.
+- [ ] Palette stays at 2–3 colors plus a single accent; the accent appears only on interactive elements.
+- [ ] All spacing and sizing land on the 8pt grid; no element floats outside the grid.
+- [ ] Exactly one focal point per screen — everything else is typographically quieter.
+- [ ] Border-radius is 0–8px and identical across all components.
+- [ ] Thin 1.5–2px stroke icons; icon weight matches typographic weight.
+- [ ] Interactive elements show a visible `:focus-visible` outline and ≥ 44×44px touch targets.

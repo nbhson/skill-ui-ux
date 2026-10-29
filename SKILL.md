@@ -5,7 +5,7 @@ description: Professional UI/UX design style guide covering 12 styles (minimalis
 
 # UI/UX Design Styles — Skill Router
 
-This skill provides 12 curated design-style guides. Each style has a detailed guide with definition, principles, color palette (hex), typography, signature visual elements, real-world use cases, combination notes, and anti-patterns.
+This skill provides 12 curated design-style guides. Each style has a detailed guide with definition, principles, color palette (hex), typography, signature visual elements, real-world use cases, combination notes, anti-patterns, accessibility notes (WCAG contrast), code examples, and an implementation checklist.
 
 ## Step 1 — Choose a style
 
@@ -30,7 +30,7 @@ If the user names a style explicitly (e.g., "neumorphic", "glassmorphism", "brut
 
 ## Step 2 — Read the style guide
 
-Each style guide lives in `skills/<NN-<style>>/SKILL.md` and follows an 8-section standard:
+Each style guide lives in `skills/<NN-<style>>/SKILL.md` and follows a 10-section standard:
 
 1. Definition — core concept in 2–3 sentences
 2. Core Design Principles — mandatory rules
@@ -39,7 +39,9 @@ Each style guide lives in `skills/<NN-<style>>/SKILL.md` and follows an 8-sectio
 5. Signature Visual Elements — shapes, effects, textures
 6. Real-World Use Cases — suitable industries/products
 7. Combination Notes — pairing tips with other styles
-8. Anti-Patterns — common mistakes that violate the style
+8. Anti-Patterns — common mistakes that violate the style (incl. accessibility notes with WCAG contrast)
+9. Code Examples — complete HTML+CSS snippets using the style's palette and tokens
+10. Implementation Checklist — pre-delivery quality checks (contrast, color budget, grid, motion)
 
 | # | Style | Guide |
 |---|-------|-------|
@@ -64,17 +66,17 @@ Each style guide lives in `skills/<NN-<style>>/SKILL.md` and follows an 8-sectio
 
 ## Machine-Readable Data
 
-For programmatic use (design linting, design-token generation, AI agents), read [`skills/data.json`](./skills/data.json) — all 12 styles as structured JSON with a fully symmetric combination matrix:
+For programmatic use (design linting, design-token generation, AI agents), read [`skills/data.json`](./skills/data.json) — all 12 styles as structured JSON with a fully symmetric combination matrix and precomputed WCAG contrast data:
 
 ```json
-{ "styles": [{ "id": "neumorphism", "sections": { "palette": [...], "combinations": {...}, "antiPatterns": [...] } }] }
+{ "styles": [{ "id": "neumorphism", "sections": { "palette": [...], "combinations": {...}, "antiPatterns": [...], "contrast": { "pairs": [...], "notes": "..." } } }] }
 ```
 
 ## Version
 
-- **Schema version:** 1.0 (xem `skills/data.json` → `meta.version`)
+- **Schema version:** 1.1 (xem `skills/data.json` → `meta.version`) — v1.1 adds `sections.contrast` (precomputed WCAG contrast pairs + notes) to every style and sections 9–10 (Code Examples, Implementation Checklist) to every guide
 - **Styles:** 12 (duyệt `skills/*/SKILL.md` hoặc `data.json` → `styles[].id`)
-- **Compatibility:** hoạt động độc lập, không phụ thuộc framework; CSS tokens ở `assets/css/` dùng CSS custom properties chuẩn (mọi browser hiện đại)
+- **Compatibility:** hoạt động độc lập, không phụ thuộc framework; CSS tokens ở `assets/css/` dùng CSS custom properties chuẩn (mọi browser hiện đại), sinh lại bằng `scripts/generate_css_tokens.py`
 - **Changelog:** xem [plan/readme.md](./plan/readme.md)
 
 Khi thay đổi cấu trúc `data.json` (thêm/xóa section), tăng `meta.version` và cập nhật section này.
